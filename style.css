@@ -26,6 +26,10 @@ header {
   z-index: 1;
 }
 
+header.active {
+  background:black;
+}
+
 .navbar {
 display:flex;
 justify-content: space-between;
