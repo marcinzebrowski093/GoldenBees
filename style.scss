@@ -15,7 +15,8 @@
   h1 {
     font-size:2rem;
     padding:1rem;
-    color:#bfbdbd;
+    color:white;
+    text-transform: uppercase;
   }
   /* Navbar Start */
   
@@ -149,11 +150,29 @@
   
   /* Hero End */
   
+  /* Services Start */
+
+  #services .services {
+    background-image:url(tlo.png);
+    background-size: cover;
+    background-position: center;
+    min-height:100vh;
+    text-align: center;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  #services h1 {
+
+  }
+
+  /* Services End */
+
+
   /* Work Start */
   
   #work .work {
-    background-image: url(background.PNG);
-    background-size: cover;
+   
     min-height:100vh;
     text-align: center;
     display:grid;
@@ -163,41 +182,7 @@
     align-self: center;
   }
   
-  #work .container {
-    position: relative;
-  display:grid;
-  grid-template-columns: repeat(7,1fr);
-  margin-right:20%;
-  align-items:center;
-  }
-  
-  #work .right {
-    margin-right:0;
-    margin-left:20%;
-  }
-  
-  #work .hexagon {
-    grid-column:3/8;
-    grid-row:1/3;
-  }
-  
-  #work .hexagon-right {
-    grid-column:1/6;
-  }
-  
-  #work img {
-    width:100%;
-  }
-  
-  #work .square {
-    align-self: center;
-    grid-column:1/8;
-    grid-row:1/3;
-    width:100%;
-    height:40%;
-    background: #bfbdbd;
-    border:1px solid black;
-  }
+ 
   
   
   /* Work End */
