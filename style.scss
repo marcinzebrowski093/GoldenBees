@@ -15,7 +15,7 @@
   h1 {
     font-size:2rem;
     padding:1rem;
-    color:white;
+    color:#bfbdbd;
     text-transform: uppercase;
   }
   /* Navbar Start */
@@ -62,7 +62,7 @@
     flex-direction: column;
     background:black;
     width:100%;
-    height:calc(100vh - 80px);
+    height:100vh;
     justify-content: center;
     align-items: center;
     z-index:1;
@@ -77,6 +77,8 @@
   .nav-list li {
     list-style: none;
     margin:2rem;
+    position:relative;
+    top:-50px;
   }
   
   .nav-list li a {
@@ -153,13 +155,11 @@
   /* Services Start */
 
   #services .services {
-    background-image:url(tlo.png);
-    background-size: cover;
-    background-position: center;
+    background:#060606;
     min-height:100vh;
     text-align: center;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display:block;
+    padding:25px;
   }
 
   #services h1 {
@@ -210,6 +210,10 @@
       
     }
   
+    .nav-list li {
+      position:static;
+    }
+
     .nav-list ul a {
       padding-right:1.5rem;
     }
@@ -229,8 +233,12 @@
       width:400px;  
       display:inherit;
     }
-  
-  
+
+    #services .services {
+      background-image:url(tlo.png);
+      background-size: cover;
+      background-position: center;
+    }
   }
   
   /* Media Queries for desktop End */
