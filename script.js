@@ -10,7 +10,7 @@ toggleButton.addEventListener('click', () => {
     headerbackground.classList.toggle('active')
 });
 
-(function(){ if(window.innerWidth > 1200){
+(function(){{
 
     var doc = document.documentElement;
     var w   = window;
@@ -138,3 +138,4 @@ toggleButton.addEventListener('click', () => {
     window.addEventListener('scroll', checkScroll);
 }
 })();
+

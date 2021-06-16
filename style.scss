@@ -18,6 +18,11 @@
     color:#bfbdbd;
     text-transform: uppercase;
   }
+
+.fixed-position {
+  position: fixed;
+}
+
   /* Navbar Start */
   
   header {
@@ -29,6 +34,7 @@
   
   header.active {
     background:black;
+    touch-action: none;
   }
   
   header.hide {

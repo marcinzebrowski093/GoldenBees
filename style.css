@@ -18,6 +18,10 @@ h1 {
   text-transform: uppercase;
 }
 
+.fixed-position {
+  position: fixed;
+}
+
 /* Navbar Start */
 header {
   position: fixed;
@@ -28,6 +32,8 @@ header {
 
 header.active {
   background: black;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 header.hide {
