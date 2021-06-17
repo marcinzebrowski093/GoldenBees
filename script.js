@@ -19,7 +19,6 @@ workNav.addEventListener('click', () => {
 toggleButton.classList.toggle('active')
 navList.classList.toggle('active')
 header.classList.toggle('active')
-header.classList.add('hide')
 });
 
 
@@ -27,7 +26,6 @@ servicesNav.addEventListener('click', () => {
     navList.classList.toggle('active')
     toggleButton.classList.toggle('active')
     header.classList.toggle('active')
-    header.classList.add('hide')
     });
 
  
