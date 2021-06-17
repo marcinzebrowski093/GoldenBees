@@ -1,6 +1,5 @@
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navList = document.getElementsByClassName('nav-links')[0]
-const imageChange = document.getElementById('toggle-button')
 const header = document.getElementById('header')
 const workNav = document.getElementById('work-nav')
 const servicesNav= document.getElementById('services-nav')
@@ -11,7 +10,7 @@ const services = document.getElementById('services')
 
 toggleButton.addEventListener('click', () => {
     navList.classList.toggle('active')
-    imageChange.classList.toggle('active')
+    toggleButton.classList.toggle('active')
     header.classList.toggle('active')
 });
 
@@ -19,7 +18,9 @@ workNav.addEventListener('click', () => {
 toggleButton.classList.toggle('active')
 navList.classList.toggle('active')
 header.classList.toggle('active')
-header.classList.add('hide')
+work.scrollIntoView({
+    behavior: "smooth",
+})
 });
 
 
@@ -27,7 +28,9 @@ servicesNav.addEventListener('click', () => {
     navList.classList.toggle('active')
     toggleButton.classList.toggle('active')
     header.classList.toggle('active')
-    header.classList.add('hide')
+    services.scrollIntoView({
+        behavior: "smooth",
+    })
     });
 
  

@@ -48,6 +48,10 @@ header.active {
   background: black;
 }
 
+header.hide1 {
+  display: none;
+}
+
 header.hide {
   display: none;
 }
@@ -102,6 +106,7 @@ header.hide {
 
 .nav-list ul.active {
   left: 0;
+  top: 0;
 }
 
 .nav-list li {

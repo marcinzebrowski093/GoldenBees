@@ -52,6 +52,10 @@ html {
     
   }
   
+  header.hide1 {
+    display:none;
+  }
+
   header.hide {
     display:none;
   }
@@ -93,6 +97,7 @@ html {
   
   .nav-list ul.active {
     left:0;
+    top:0;
   }
   
   .nav-list li {
