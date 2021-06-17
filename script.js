@@ -1,17 +1,39 @@
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navList = document.getElementsByClassName('nav-links')[0]
 const imageChange = document.getElementById('toggle-button')
-const headerbackground = document.getElementById('header')
+const header = document.getElementById('header')
+const workNav = document.getElementById('work-nav')
+const servicesNav= document.getElementById('services-nav')
+const work = document.getElementById('work')
+const services = document.getElementById('services')
+
 
 
 toggleButton.addEventListener('click', () => {
     navList.classList.toggle('active')
     imageChange.classList.toggle('active')
-    headerbackground.classList.toggle('active')
+    header.classList.toggle('active')
 });
 
-(function(){{
+workNav.addEventListener('click', () => {
+toggleButton.classList.toggle('active')
+navList.classList.toggle('active')
+header.classList.toggle('active')
+header.classList.add('hide')
+});
 
+
+servicesNav.addEventListener('click', () => {
+    navList.classList.toggle('active')
+    toggleButton.classList.toggle('active')
+    header.classList.toggle('active')
+    header.classList.add('hide')
+    });
+
+ 
+
+
+(function(){if (window.innerWidth > 1200 || (window.innerWidth <= 1200 && !(toggleButton.classList.contains('active'))) ){
     var doc = document.documentElement;
     var w   = window;
 
@@ -45,6 +67,7 @@ toggleButton.addEventListener('click', () => {
     var threshold = 200;
 
     var checkScroll = function() {
+        if(window.innerWidth > 1200 || window.innerWidth <= 1200 && !(toggleButton.classList.contains('active'))){
         curScroll = w.scrollY || doc.scrollTop;
         if(curScroll > prevScroll) {
             // scrolled down
@@ -62,7 +85,7 @@ toggleButton.addEventListener('click', () => {
         prevScroll = curScroll;
         if(toggled) {
             prevDirection = curDirection;
-        }
+        }}
     };
 
     var toggleHeader = function() { 
@@ -80,62 +103,10 @@ toggleButton.addEventListener('click', () => {
     };
 
     window.addEventListener('scroll', checkScroll);
+
+   
+    
 }
 })();
 
-(function(){ if (window.innerWidth > 1200 && !(toggleButton.classList.contains('active'))){
-
-    var doc = document.documentElement;
-    var w   = window;
-
-
-    var curScroll;
-    var prevScroll = w.scrollY || doc.scrollTop;
-    var curDirection = 0;
-    var prevDirection = 0;
-
-  
-
-    var header = document.getElementById('header');
-    var toggled;
-    var threshold = 200;
-
-    var checkScroll = function() {
-        curScroll = w.scrollY || doc.scrollTop;
-        if(curScroll > prevScroll) {
-       
-            curDirection = 2;
-        }
-        else {
-         
-            curDirection = 1;
-        }
-
-        if(curDirection !== prevDirection) {
-            toggled = toggleHeader();
-        }
-
-        prevScroll = curScroll;
-        if(toggled) {
-            prevDirection = curDirection;
-        }
-    };
-
-    var toggleHeader = function() { 
-        toggled = true;
-        if(curDirection === 2 && curScroll > threshold) {
-            header.classList.add('hide');
-        }
-        else if (curDirection === 1) {
-            header.classList.remove('hide');
-        }
-        else {
-            toggled = false;
-        }
-        return toggled;
-    };
-
-    window.addEventListener('scroll', checkScroll);
-}
-})();
 

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant&display=swap");
 @font-face {
   font-family: 'didot';
   src: url(Didot\ Regular), format("opentype");
@@ -11,11 +12,24 @@
   font-family: 'didot';
 }
 
+html {
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+#services,
+#work,
+#about,
+#contact {
+  outline: none;
+}
+
 h1 {
   font-size: 2rem;
   padding: 1rem;
   color: #bfbdbd;
   text-transform: uppercase;
+  font-family: 'Cormorant', serif;
 }
 
 .fixed-position {
@@ -32,8 +46,6 @@ header {
 
 header.active {
   background: black;
-  -ms-touch-action: none;
-      touch-action: none;
 }
 
 header.hide {
@@ -170,7 +182,7 @@ header.hide {
 /* Hero End */
 /* Services Start */
 #services .services {
-  background: #060606;
+  background: #101010;
   min-height: 100vh;
   text-align: center;
   display: block;
@@ -180,6 +192,7 @@ header.hide {
 /* Services End */
 /* Work Start */
 #work .work {
+  background: black;
   min-height: 100vh;
   text-align: center;
   display: -ms-grid;
