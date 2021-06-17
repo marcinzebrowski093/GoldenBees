@@ -21,6 +21,7 @@ header.classList.toggle('active')
 work.scrollIntoView({
     behavior: "smooth",
 })
+
 });
 
 
@@ -31,6 +32,7 @@ servicesNav.addEventListener('click', () => {
     services.scrollIntoView({
         behavior: "smooth",
     })
+    header.classList.add('hide')
     });
 
  
