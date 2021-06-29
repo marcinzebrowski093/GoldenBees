@@ -30,6 +30,7 @@ h1 {
   color: #bfbdbd;
   text-transform: uppercase;
   font-family: 'Cormorant', serif;
+  letter-spacing: 5px;
 }
 
 .fixed-position {
@@ -113,7 +114,6 @@ header.hide {
   list-style: none;
   margin: 2rem;
   position: relative;
-  top: -50px;
 }
 
 .nav-list li a {
@@ -194,6 +194,29 @@ header.hide {
   padding: 25px;
 }
 
+#services .web-development {
+  margin: 10px;
+  padding: 25px;
+  background: #202020;
+  height: 15em;
+  border-radius: 15px;
+}
+
+.web-development img {
+  width: 60px;
+}
+
+.web-development h2 {
+  font-size: 1rem;
+  color: white;
+}
+
+.web-development p {
+  font-size: 0.8rem;
+  margin-top: 15px;
+  color: #bfbdbd;
+}
+
 /* Services End */
 /* Work Start */
 #work .work {
@@ -211,6 +234,37 @@ header.hide {
 }
 
 /* Work End */
+/* About Start */
+#about .about {
+  background: black;
+  min-height: 100vh;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+}
+
+/* About End */
+/* Contact Start */
+#contact .contact {
+  background: black;
+  min-height: 100vh;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+}
+
+/* Contact End */
+/* Media Queries for tablet Start */
+@media all and (min-width: 576px) {
+  #services .services-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Media Queries for tablet End */
 /* Media Queries for desktop Start */
 @media all and (min-width: 1200px) {
   .brand-logo {
@@ -253,6 +307,32 @@ header.hide {
     background-image: url(tlo.png);
     background-size: cover;
     background-position: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #services .services-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  #services .web-development {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  #services .web-development:hover {
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    -webkit-transition: 500ms;
+    transition: 500ms;
   }
 }
 

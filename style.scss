@@ -32,6 +32,7 @@ html {
     color:#bfbdbd;
     text-transform: uppercase;
     font-family: 'Cormorant', serif;
+    letter-spacing: 5px;
   }
 
 .fixed-position {
@@ -104,7 +105,6 @@ html {
     list-style: none;
     margin:2rem;
     position:relative;
-    top:-50px;
   }
   
   .nav-list li a {
@@ -190,8 +190,28 @@ html {
     padding:25px;
   }
 
-  #services h1 {
+  #services .web-development {
+    margin:10px;
+    padding:25px;
+    background: #202020;
+    height:15em;
+    border-radius:15px;
+  }
 
+  .web-development img {
+    width:60px;
+    
+  }
+
+  .web-development h2 {
+    font-size:1rem;
+    color:white;
+  }
+
+  .web-development p {
+    font-size:0.8rem;
+    margin-top:15px;
+    color:#bfbdbd;
   }
 
   /* Services End */
@@ -214,7 +234,38 @@ html {
   
   
   /* Work End */
-  
+
+/* About Start */
+
+  #about .about {
+    background:black;
+     min-height:100vh;
+     text-align: center;
+     display:grid;
+   }
+
+/* About End */   
+
+/* Contact Start */
+
+   #contact .contact {
+    background:black;
+     min-height:100vh;
+     text-align: center;
+     display:grid;
+   }
+
+/* Contact End */   
+
+  /* Media Queries for tablet Start */
+  @media all and (min-width:576px) {
+  #services .services-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  }
+  /* Media Queries for tablet End */
+
   /* Media Queries for desktop Start */
   
   @media all and (min-width:1200px){
@@ -266,8 +317,30 @@ html {
       background-image:url(tlo.png);
       background-size: cover;
       background-position: center;
+      display:grid;
+      grid-template-columns: 1fr 3fr;
+      justify-content: center;
+      align-items: center;
     }
+
+    #services .services-container {
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #services .web-development {
+    background:rgba(0,0,0,0.3);
+
+    }
+
+    #services .web-development:hover {
+    background:rgba(0,0,0,0.6);
+    transform:scale(1.15);
+    transition: 500ms;
+    }
+
   }
+
   
   /* Media Queries for desktop End */
   

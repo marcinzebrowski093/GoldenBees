@@ -15,6 +15,7 @@ toggleButton.addEventListener('click', () => {
 });
 
 workNav.addEventListener('click', () => {
+    if (window.matchMedia("(max-width"))
 toggleButton.classList.toggle('active')
 navList.classList.toggle('active')
 header.classList.toggle('active')
