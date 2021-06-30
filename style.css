@@ -158,7 +158,7 @@ header.hide {
 
 #hero .hero img {
   position: absolute;
-  width: 200px;
+  width: 250px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -194,27 +194,36 @@ header.hide {
   padding: 25px;
 }
 
-#services .web-development {
+#services .services-card {
   margin: 10px;
   padding: 25px;
   background: #202020;
   height: 15em;
   border-radius: 15px;
+  opacity: 0;
 }
 
-.web-development img {
-  width: 60px;
+.services-card img {
+  height: 55px;
 }
 
-.web-development h2 {
+.services-card h2 {
+  margin-top: 10px;
   font-size: 1rem;
   color: white;
+  text-transform: uppercase;
 }
 
-.web-development p {
-  font-size: 0.8rem;
+.services-card p {
+  font-size: 0.9rem;
   margin-top: 15px;
   color: #bfbdbd;
+  text-align: justify;
+}
+
+#services .services-card.active {
+  -webkit-animation: animate-servicecards 2s linear 1 forwards;
+          animation: animate-servicecards 2s linear 1 forwards;
 }
 
 /* Services End */
@@ -241,6 +250,7 @@ header.hide {
   text-align: center;
   display: -ms-grid;
   display: grid;
+  position: relative;
 }
 
 /* About End */
@@ -254,6 +264,7 @@ header.hide {
 }
 
 /* Contact End */
+/* Media Queries for mobile */
 /* Media Queries for tablet Start */
 @media all and (min-width: 576px) {
   #services .services-container {
@@ -324,15 +335,44 @@ header.hide {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
   }
-  #services .web-development {
+  #services .services-card {
     background: rgba(0, 0, 0, 0.3);
   }
-  #services .web-development:hover {
-    background: rgba(0, 0, 0, 0.6);
-    -webkit-transform: scale(1.15);
-            transform: scale(1.15);
-    -webkit-transition: 500ms;
-    transition: 500ms;
+  #services .services-card:hover {
+    background: rgba(0, 0, 0, 0.75);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  #services .web-development.active {
+    -webkit-animation: animate-servicecards 2s linear 1 forwards;
+            animation: animate-servicecards 2s linear 1 forwards;
+  }
+  #services .graphic-design.active {
+    -webkit-animation: animate-servicecards 2s linear 500ms 1 normal forwards;
+            animation: animate-servicecards 2s linear 500ms 1 normal forwards;
+  }
+  #services .ui-ux.active {
+    -webkit-animation: animate-servicecards 2s linear 1s 1 normal forwards;
+            animation: animate-servicecards 2s linear 1s 1 normal forwards;
+  }
+  #services .ecommerce.active {
+    -webkit-animation: animate-servicecards 2s linear 500ms 1 normal forwards;
+            animation: animate-servicecards 2s linear 500ms 1 normal forwards;
+  }
+  #services .social.active {
+    -webkit-animation: animate-servicecards 2s linear 1s 1 normal forwards;
+            animation: animate-servicecards 2s linear 1s 1 normal forwards;
+  }
+  #services .marketing.active {
+    -webkit-animation: animate-servicecards 2s linear 1.5s 1 normal forwards;
+            animation: animate-servicecards 2s linear 1.5s 1 normal forwards;
+  }
+  #work .work {
+    background-image: url("workbackground.png");
+    background-position: center;
+    background-size: cover;
   }
 }
 
@@ -359,6 +399,30 @@ header.hide {
   }
   50% {
     opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animate-servicecards {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate-servicecards {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;

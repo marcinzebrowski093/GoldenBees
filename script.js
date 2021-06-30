@@ -8,6 +8,7 @@ const services = document.getElementById('services')
 
 
 
+
 toggleButton.addEventListener('click', () => {
     navList.classList.toggle('active')
     toggleButton.classList.toggle('active')
@@ -15,10 +16,10 @@ toggleButton.addEventListener('click', () => {
 });
 
 workNav.addEventListener('click', () => {
-    if (window.matchMedia("(max-width"))
+    if (window.matchMedia('(max-width: 1200px)').matches){
 toggleButton.classList.toggle('active')
 navList.classList.toggle('active')
-header.classList.toggle('active')
+header.classList.toggle('active')}
 work.scrollIntoView({
     behavior: "smooth",
 })
@@ -27,13 +28,14 @@ work.scrollIntoView({
 
 
 servicesNav.addEventListener('click', () => {
+    if (window.matchMedia('(max-width: 1200px)').matches){
     navList.classList.toggle('active')
     toggleButton.classList.toggle('active')
-    header.classList.toggle('active')
+    header.classList.toggle('active')}
     services.scrollIntoView({
         behavior: "smooth",
     })
-    header.classList.add('hide')
+
     });
 
  
@@ -116,3 +118,28 @@ servicesNav.addEventListener('click', () => {
 })();
 
 
+let servicesBoxes = [...document.querySelectorAll('.services-card')]
+
+let titleSection = [...document.querySelectorAll('h1')]
+
+let options = {
+    rootMargin: '0px 0px -250px 0px',
+    treshold: 2,
+}
+
+
+
+let callback = (entries, observer) => (
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('active')
+        }
+    })
+)
+
+let observer = new IntersectionObserver (callback, options);
+
+
+servicesBoxes.forEach((item) => {
+    observer.observe(item)
+})

@@ -154,7 +154,7 @@ html {
   
   #hero .hero img {
     position:absolute;
-    width:200px;
+    width:250px;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
@@ -190,29 +190,40 @@ html {
     padding:25px;
   }
 
-  #services .web-development {
+  #services .services-card {
     margin:10px;
     padding:25px;
     background: #202020;
     height:15em;
     border-radius:15px;
+    opacity:0;
   }
 
-  .web-development img {
-    width:60px;
-    
+
+  .services-card img {
+  height:55px;
+  
   }
 
-  .web-development h2 {
+  .services-card h2 {
+    margin-top:10px;
     font-size:1rem;
     color:white;
+    text-transform: uppercase;
   }
 
-  .web-development p {
-    font-size:0.8rem;
+  .services-card p {
+    font-size:0.9rem;
     margin-top:15px;
     color:#bfbdbd;
+    text-align:justify;
   }
+
+
+  #services .services-card.active {
+   animation: animate-servicecards 2s linear 1 forwards;
+  }
+
 
   /* Services End */
 
@@ -242,7 +253,10 @@ html {
      min-height:100vh;
      text-align: center;
      display:grid;
+     position:relative;
    }
+
+  
 
 /* About End */   
 
@@ -256,6 +270,9 @@ html {
    }
 
 /* Contact End */   
+
+   /* Media Queries for mobile */
+
 
   /* Media Queries for tablet Start */
   @media all and (min-width:576px) {
@@ -328,15 +345,43 @@ html {
       grid-template-columns: 1fr 1fr 1fr;
     }
 
-    #services .web-development {
+    #services .services-card {
     background:rgba(0,0,0,0.3);
-
     }
 
-    #services .web-development:hover {
-    background:rgba(0,0,0,0.6);
-    transform:scale(1.15);
-    transition: 500ms;
+    #services .services-card:hover {
+    background:rgba(0,0,0,0.75);
+    transform:scale(1.2);
+    transition:1s;
+    }
+
+
+
+    #services .web-development.active {
+      animation: animate-servicecards 2s linear 1 forwards;
+    }
+    
+    #services .graphic-design.active {
+      animation: animate-servicecards 2s linear 500ms 1 normal forwards;
+    }
+
+    #services .ui-ux.active {
+      animation: animate-servicecards 2s linear 1s 1 normal forwards;
+    }
+    #services .ecommerce.active {
+      animation: animate-servicecards 2s linear 500ms 1 normal forwards;
+    }
+    #services .social.active {
+      animation: animate-servicecards 2s linear 1s 1 normal forwards;
+    }
+    #services .marketing.active {
+      animation: animate-servicecards 2s linear 1.5s 1 normal forwards;
+    }
+    
+    #work .work {
+      background-image:url("workbackground.png");
+      background-position: center;
+      background-size: cover;
     }
 
   }
@@ -364,4 +409,20 @@ html {
   
   }
   
+  @keyframes animate-servicecards {
+    0% {
+      opacity: 0;
+    }
+    
+    50% {
+      opacity: 0.5;
+    }
+  
+    100% {
+      opacity: 1;
+  
+    }
+  
+  }
+
   /* Keyframes End */
