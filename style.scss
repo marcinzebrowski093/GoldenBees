@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 @font-face {
-    font-family:'didot';
+  font-family: 'Montserrat', sans-serif;
     src: url(Didot\ Regular),
          format('opentype');
   
@@ -11,7 +13,7 @@
     box-sizing: border-box;
     margin:0;
     padding:0;
-    font-family: 'didot';
+    font-family: 'Montserrat', sans-serif;
   }
   
 html {
@@ -31,7 +33,7 @@ html {
     padding:1rem;
     color:#bfbdbd;
     text-transform: uppercase;
-    font-family: 'Cormorant', serif;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 5px;
   }
 
@@ -149,12 +151,12 @@ html {
   
   #hero .hero {
     min-height:100vh;
-    background-color: black;
+    background:black;
   }
   
   #hero .hero img {
     position:absolute;
-    width:250px;
+    width:350px;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
@@ -210,9 +212,11 @@ html {
     font-size:1rem;
     color:white;
     text-transform: uppercase;
+    font-weight:400;
   }
 
   .services-card p {
+    font-weight:100;
     font-size:0.9rem;
     margin-top:15px;
     color:#bfbdbd;
@@ -221,7 +225,7 @@ html {
 
 
   #services .services-card.active {
-   animation: animate-servicecards 2s linear 1 forwards;
+   animation: fade-in 2s linear 1 forwards;
   }
 
 
@@ -235,10 +239,11 @@ html {
     min-height:100vh;
     text-align: center;
     display:grid;
+    padding:25px;
   }
   
-  #work h1 {
-    align-self: center;
+  #work .project {
+    align-self: flex-end;
   }
   
  
@@ -256,6 +261,7 @@ html {
      position:relative;
    }
 
+   
   
 
 /* About End */   
@@ -325,13 +331,13 @@ html {
     }
   
     #hero .hero img:nth-child(2) {
-      left:60%;
-      width:400px;  
+      left:65%;
+      width:500px;  
       display:inherit;
     }
 
     #services .services {
-      background-image:url(tlo.png);
+      background-image:url(tloservices1.png);
       background-size: cover;
       background-position: center;
       display:grid;
@@ -339,6 +345,7 @@ html {
       justify-content: center;
       align-items: center;
     }
+    
 
     #services .services-container {
       display:grid;
@@ -355,34 +362,137 @@ html {
     transition:1s;
     }
 
-
+  
 
     #services .web-development.active {
-      animation: animate-servicecards 2s linear 1 forwards;
+      animation: fade-in 2s linear 1 forwards;
     }
     
     #services .graphic-design.active {
-      animation: animate-servicecards 2s linear 500ms 1 normal forwards;
+      animation: fade-in 2s linear 500ms 1 normal forwards;
     }
 
     #services .ui-ux.active {
-      animation: animate-servicecards 2s linear 1s 1 normal forwards;
+      animation: fade-in 2s linear 1s 1 normal forwards;
     }
     #services .ecommerce.active {
-      animation: animate-servicecards 2s linear 500ms 1 normal forwards;
+      animation: fade-in 2s linear 500ms 1 normal forwards;
     }
     #services .social.active {
-      animation: animate-servicecards 2s linear 1s 1 normal forwards;
+      animation: fade-in 2s linear 1s 1 normal forwards;
     }
     #services .marketing.active {
-      animation: animate-servicecards 2s linear 1.5s 1 normal forwards;
+      animation: fade-in 2s linear 1.5s 1 normal forwards;
     }
     
     #work .work {
-      background-image:url("workbackground.png");
+      position:relative;
+      background:black;
       background-position: center;
       background-size: cover;
+      overflow: hidden;
+      display:grid;
+      grid-template-columns: 3fr 1fr;
+      padding:0;
     }
+
+
+    #work svg {
+      position:absolute;
+      right:0;
+      max-height: 100vh;
+      transform: translateX(70%);
+      opacity:0.5;
+      
+    }
+
+    #work svg.active {
+      animation: animate-triangle 2s forwards;
+    }
+
+    #work .project {
+      grid-column: 2/3;
+      position: relative;
+      z-index:999;
+      margin:25px;
+      opacity:0;
+      display:block;
+      overflow:hidden;    
+    }
+
+    #work .project.active {
+      animation: fade-in 1.5s 650ms forwards;
+      overflow:hidden;
+    }
+
+    #work h3 {
+      color:white;
+      margin-top:10px;
+      font-size:3.5rem;
+    }
+
+    #work p {
+      color:white;
+      margin-top:50px;
+      font-size:2.5rem;
+      letter-spacing: 3px;
+      margin-right:10px;    
+    }
+
+    #work span {
+      font-size:1rem;
+    }
+
+    #work .buttons {
+      margin-top:20px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom:100px;
+    }
+
+    .buttons .btn-prev {
+      margin:5px;
+      width:35px;
+      height:35px;
+      border: 1.2px solid white;
+
+      justify-self: flex-end;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .buttons .btn-next {
+      margin:5px;
+      width:35px;
+      height:35px;
+      border: 1.2px solid white;
+     
+      justify-self: flex-start;
+    }
+
+    .arrow {
+      border: solid white;
+      border-width: 0 1px 1px 0;
+      display: inline-block;
+      padding: 5px;
+      justify-self: center;
+      align-self:center;
+      margin-top:10px;
+    }
+    
+    .right {
+      margin-right:2px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+    
+    .left {
+      margin-left: 2px;
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+    
+
 
   }
 
@@ -409,7 +519,7 @@ html {
   
   }
   
-  @keyframes animate-servicecards {
+  @keyframes fade-in {
     0% {
       opacity: 0;
     }
@@ -423,6 +533,12 @@ html {
   
     }
   
+  }
+
+  @keyframes animate-triangle {
+    100% {
+      transform: translateX(20%);
+    }
   }
 
   /* Keyframes End */

@@ -127,6 +127,10 @@ let options = {
     treshold: 2,
 }
 
+let options1 = {
+    rootMargin: '0px 0px -500px 0px',
+    treshold:1,
+}
 
 
 let callback = (entries, observer) => (
@@ -143,3 +147,16 @@ let observer = new IntersectionObserver (callback, options);
 servicesBoxes.forEach((item) => {
     observer.observe(item)
 })
+
+let triangle = document.getElementById('triangle');
+
+let observerTriangle = new IntersectionObserver (callback, options1);
+
+observerTriangle.observe(triangle)
+
+let Text = document.getElementById('project')
+
+let observerText = new IntersectionObserver (callback,options1);
+
+observerText.observe(Text)
+
