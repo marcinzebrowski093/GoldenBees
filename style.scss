@@ -46,7 +46,7 @@ html {
   header {
     position: fixed;
     width:100%;
-    background:rgba(0, 0, 0, 0.75);
+    background:transparent;
     z-index: 1;
   }
   
@@ -85,10 +85,11 @@ html {
     position:absolute;
     margin:0;
     padding:0;
+    top:0;
     display:flex;
     left:100%;
     flex-direction: column;
-    background:black;
+    background-image:url(landing1.png);
     width:100%;
     height:100vh;
     justify-content: center;
@@ -148,15 +149,16 @@ html {
   
   
   /* Hero Start */
-  
   #hero .hero {
     min-height:100vh;
-    background:black;
+    background-image: url(landing1.png);
   }
+
+
   
   #hero .hero img {
     position:absolute;
-    width:350px;
+    width:250px;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
@@ -210,7 +212,7 @@ html {
   .services-card h2 {
     margin-top:10px;
     font-size:1rem;
-    color:white;
+    color:#bfbdbd;
     text-transform: uppercase;
     font-weight:400;
   }
@@ -219,7 +221,7 @@ html {
     font-weight:100;
     font-size:0.9rem;
     margin-top:15px;
-    color:#bfbdbd;
+    color:white;
     text-align:justify;
   }
 
@@ -244,9 +246,16 @@ html {
   
   #work .project {
     align-self: flex-end;
+    overflow:hidden;   
   }
   
+  #two, #three, #four {
+    display:none;
+  }
  
+  #work svg {
+    display:none;
+  }
   
   
   /* Work End */
@@ -273,6 +282,7 @@ html {
      min-height:100vh;
      text-align: center;
      display:grid;
+     color: #bfbfbf;
    }
 
 /* Contact End */   
@@ -307,13 +317,16 @@ html {
       flex-direction: row;
       position: relative;
       height:80px;
-      left:0;
+      left:-10%;
       background:transparent;
+      text-transform: uppercase;
+      font-size:0.85rem;
       
     }
   
     .nav-list li {
       position:static;
+      margin:1.2rem;
     }
 
     .nav-list ul a {
@@ -326,13 +339,70 @@ html {
       display: none;
     }
   
+    #hero::after {
+      content:'';
+      position:absolute;
+      top:40px;
+      right: 25px;
+      border-left: 0.2px solid #bfbdbd;
+      height:400px;
+    }
+  
+    #hero .hero::after {
+      content:'';
+      position:absolute;
+      top:60px;
+      right: 50px;
+      border-top:0.2px solid #bfbdbd;
+      width:650px;
+    }
+
+    #hero .dot {
+      position: absolute;
+      top:58px;
+      right:720px;
+      height: 6px;
+      width: 6px;
+      background-color: #bfbdbd;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    #hero .dot1 {
+      right:735px;
+    }
+
+    #hero .dot2 {
+      right:750px;
+    }
+
+
+    #hero .dott {
+      position:absolute;
+      top:460px;
+      right:23px;
+      height:6px;
+      width:6px;
+      background-color: #bfbdbd;
+      border-radius:50%;
+      display:inline block;
+    }
+
+    #hero .dott1 {
+      top:475px;
+    }
+
+    #hero .dott2 {
+      top:490px;
+    }
+
     #hero .hero img {
-      left:35%;
+      left:25%;
     }
   
     #hero .hero img:nth-child(2) {
-      left:65%;
-      width:500px;  
+      left:60%;
+      width:700px;  
       display:inherit;
     }
 
@@ -398,11 +468,12 @@ html {
 
 
     #work svg {
+      display:inherit;
       position:absolute;
       right:0;
       max-height: 100vh;
       transform: translateX(70%);
-      opacity:0.5;
+      opacity:0.8;
       
     }
 
@@ -416,8 +487,7 @@ html {
       z-index:999;
       margin:25px;
       opacity:0;
-      display:block;
-      overflow:hidden;    
+      display:block; 
     }
 
     #work .project.active {
@@ -436,7 +506,7 @@ html {
       margin-top:50px;
       font-size:2.5rem;
       letter-spacing: 3px;
-      margin-right:10px;    
+      margin-right:5px;    
     }
 
     #work span {
@@ -450,12 +520,19 @@ html {
       margin-bottom:100px;
     }
 
+    .buttons .btn-next:hover,
+    .buttons .btn-prev:hover {
+      background:white;
+      cursor: pointer;
+      box-shadow: inset 1px 1px 3px black;
+    }
+
     .buttons .btn-prev {
       margin:5px;
       width:35px;
       height:35px;
-      border: 1.2px solid white;
-
+      border: 2px solid white;
+      border-radius: 50px;
       justify-self: flex-end;
       align-content: center;
       justify-content: center;
@@ -465,14 +542,14 @@ html {
       margin:5px;
       width:35px;
       height:35px;
-      border: 1.2px solid white;
-     
+      border: 2px solid white;
+      border-radius: 50px;
       justify-self: flex-start;
     }
 
     .arrow {
       border: solid white;
-      border-width: 0 1px 1px 0;
+      border-width: 0 2px 2px 0;
       display: inline-block;
       padding: 5px;
       justify-self: center;
@@ -480,19 +557,85 @@ html {
       margin-top:10px;
     }
     
+    .btn-next:hover .right,
+    .btn-prev:hover .left {
+     border:solid black;
+     border-width: 0 2px 2px 0;
+     padding: 5px;
+     justify-self: center;
+     align-self:center;
+     margin-top:10px;
+    }
+
     .right {
-      margin-right:2px;
+      margin-right:5px;
       transform: rotate(-45deg);
       -webkit-transform: rotate(-45deg);
     }
     
     .left {
-      margin-left: 2px;
+      margin-left: 5px;
       transform: rotate(135deg);
       -webkit-transform: rotate(135deg);
     }
     
+    #contact .contact {
+      padding:25px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+    }
 
+    #contact .contact-detail {
+      padding:100px;
+    }
+
+    #contact h1 {
+      margin-bottom:15px;
+    }
+
+    #contact h2 {
+      text-transform: uppercase;
+    }
+
+    #contact h3 {
+      margin-top:50px;
+      margin-bottom:15px;
+    }
+
+  #contact .contact-form {
+    padding:100px;
+  }
+
+  #contact .form-container {
+    padding:50px;
+    background-image:linear-gradient(to right,#101010,black);
+    display:block;
+    }
+
+    #contact .field {
+      width:100%;
+      margin-top:50px;
+      background:transparent;
+      border-bottom:0.2px solid #bfbdbd;
+      padding-bottom:5px;
+    }
+    #contact input {
+      border:none;
+      box-shadow:none;
+    }
+
+    #contact button {
+      margin-top:50px;
+      text-transform: uppercase;
+      width:200px;
+      height:40px;
+      color:#bfbdbd;
+      background-image:linear-gradient(to left,#101010,black);
+      border:none;
+      cursor:pointer;
+    }
 
   }
 

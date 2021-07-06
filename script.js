@@ -38,7 +38,14 @@ servicesNav.addEventListener('click', () => {
 
     });
 
- 
+    window.addEventListener("scroll", function(){
+        if(window.scrollY==0){
+            header.style.backgroundColor ="transparent";
+        } else {
+            header.style.backgroundColor ="rgba(0,0,0,0.75)";
+        }
+      });
+
 
 
 (function(){if (window.innerWidth > 1200 || (window.innerWidth <= 1200 && !(toggleButton.classList.contains('active'))) ){
@@ -74,8 +81,12 @@ servicesNav.addEventListener('click', () => {
     var toggled;
     var threshold = 200;
 
+
+
     var checkScroll = function() {
         if(window.innerWidth > 1200 || window.innerWidth <= 1200 && !(toggleButton.classList.contains('active'))){
+
+           
         curScroll = w.scrollY || doc.scrollTop;
         if(curScroll > prevScroll) {
             // scrolled down
@@ -112,6 +123,7 @@ servicesNav.addEventListener('click', () => {
 
     window.addEventListener('scroll', checkScroll);
 
+ 
    
     
 }
@@ -156,7 +168,8 @@ observerTriangle.observe(triangle)
 
 let Text = document.getElementById('project')
 
-let observerText = new IntersectionObserver (callback,options1);
+let observerText = new IntersectionObserver (callback,options);
 
 observerText.observe(Text)
 
+ 
