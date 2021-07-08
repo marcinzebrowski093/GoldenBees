@@ -29,7 +29,7 @@ html {
 }
 
   h1 {
-    font-size:2rem;
+    font-size:2.5rem;
     padding:1rem;
     color:#bfbdbd;
     text-transform: uppercase;
@@ -152,6 +152,8 @@ html {
   #hero .hero {
     min-height:100vh;
     background-image: url(landing1.png);
+    background-position: center;
+    background-size:cover;
   }
 
 
@@ -246,7 +248,7 @@ html {
   
   #work .project {
     align-self: flex-end;
-    overflow:hidden;   
+    overflow-x:hidden;   
   }
   
   #two, #three, #four {
@@ -302,6 +304,20 @@ html {
   /* Media Queries for desktop Start */
   
   @media all and (min-width:1200px){
+    .container {
+      scroll-snap-type: y mandatory;
+     height:100vh;
+    }
+
+
+    
+    section {
+      scroll-snap-align: start;
+      height:100vh;
+      max-height:100vh;
+    }
+
+
     .brand-logo 
     {
       position: relative;
@@ -338,7 +354,9 @@ html {
     .toggle-button {
       display: none;
     }
-  
+    
+    
+
     #hero::after {
       content:'';
       position:absolute;
@@ -406,14 +424,24 @@ html {
       display:inherit;
     }
 
-    #services .services {
-      background-image:url(tloservices1.png);
-      background-size: cover;
+    #services {
+      background-image: url(tloservices1.png);
+      background-size:cover;
       background-position: center;
+      align-items: center;
+      justify-content: center;
+      align-content:center;
+      justify-items: center;
+      display:grid;
+    }
+
+    #services .services {
       display:grid;
       grid-template-columns: 1fr 3fr;
       justify-content: center;
       align-items: center;
+      max-width:1500px;
+      background:transparent;
     }
     
 
@@ -472,6 +500,7 @@ html {
       position:absolute;
       right:0;
       max-height: 100vh;
+      height:100vh;
       transform: translateX(70%);
       opacity:0.8;
       
@@ -492,7 +521,7 @@ html {
 
     #work .project.active {
       animation: fade-in 1.5s 650ms forwards;
-      overflow:hidden;
+      overflow-x:hidden;
     }
 
     #work h3 {
@@ -579,12 +608,26 @@ html {
       -webkit-transform: rotate(135deg);
     }
     
+    #contact {
+      background-image:url(tlocontact.png);
+      background-size: cover;
+      background-position: center;
+      align-content: center;
+      justify-content: center;
+      display:grid;
+      position:relative;
+      
+    }
+
     #contact .contact {
-      padding:25px;
+      background:transparent;
+      position:relative;
       display:grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
       justify-items: center;
+      
+      max-width:1500px;
     }
 
     #contact .contact-detail {
@@ -597,6 +640,7 @@ html {
 
     #contact h2 {
       text-transform: uppercase;
+      font-size:2.5rem;
     }
 
     #contact h3 {
@@ -608,10 +652,15 @@ html {
     padding:100px;
   }
 
+
+
   #contact .form-container {
     padding:50px;
-    background-image:linear-gradient(to right,#101010,black);
+    background-image:url(contactform.svg);
+    background-position: center;
+    background-size:cover;
     display:block;
+    position:relative;
     }
 
     #contact .field {
@@ -624,17 +673,123 @@ html {
     #contact input {
       border:none;
       box-shadow:none;
+      color:#bfbdbd;
+      font-size:1rem;
     }
 
     #contact button {
+      font-size:1rem;
       margin-top:50px;
       text-transform: uppercase;
       width:200px;
       height:40px;
       color:#bfbdbd;
-      background-image:linear-gradient(to left,#101010,black);
+      background-image:linear-gradient(black, #202020);
       border:none;
       cursor:pointer;
+      align-items: center;
+      justify-items: center;
+
+    }
+
+    #contact button:hover {
+      border: 0.2px solid #bfbdbd;
+    }
+
+    #contact select {
+    color:#bfbdbd;
+    }
+
+    #contact textarea {
+      border: none;
+      color:#bfbdbd;
+      font-size:1rem;
+      max-width:100%;
+      resize:vertical;
+    }
+
+    #contact .icons {
+      position:absolute;
+      bottom: 150px;
+      left:50px;
+      display:grid;
+      align-items:center;
+      justify-items: center;
+      color:#bfbdbd;
+      align-items: center;
+      justify-items: center;
+    }
+
+    #contact .contact-form i {
+      vertical-align:middle;
+      margin-left:5px;
+    }
+
+    #contact .icons i {
+      margin-top:15px;
+      cursor:pointer;
+    }
+
+    #contact .icons i:hover {
+      color:white;
+    }
+
+    #contact .form-container::after {
+      content: '';
+      position:absolute;
+      top:-15px;
+      right:2%;
+      width:450px;
+      height:1px;
+      background:#bfbdbd;
+    }
+  
+    #contact .form-container::before {
+      content: '';
+      position:absolute;
+      top:-15px;
+      right:-15px;
+      width:1px;
+      height:450px;
+      background:#bfbdbd;
+    }
+
+    #contact  .dottt {
+      position:absolute;
+      top:-17px;
+      right:470px;
+      height:6px;
+      width:6px;
+      background-color: #bfbdbd;
+      border-radius:50%;
+      display:inline block;
+    }
+
+    #contact .dottt1 {
+      right:485px;
+    }
+
+    #contact .dottt2 {
+      right:500px;
+    }
+
+    #contact .dotttt {
+      position:absolute;
+      background-color:#bfbdbd;
+      border-radius:50%;
+      display:inline-block;
+      height:6px;
+      width:6px;
+      right:-17px;
+      top: 450px;
+    }
+
+    #contact .dotttt1 {
+      top:465px;
+    }
+
+    #contact .dotttt2 {
+      top:480px;
     }
 
   }

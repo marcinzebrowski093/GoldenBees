@@ -27,7 +27,7 @@ html {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding: 1rem;
   color: #bfbdbd;
   text-transform: uppercase;
@@ -157,6 +157,8 @@ header.hide {
 #hero .hero {
   min-height: 100vh;
   background-image: url(landing1.png);
+  background-position: center;
+  background-size: cover;
 }
 
 #hero .hero img {
@@ -245,7 +247,7 @@ header.hide {
 #work .project {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #two, #three, #four {
@@ -293,6 +295,16 @@ header.hide {
 /* Media Queries for tablet End */
 /* Media Queries for desktop Start */
 @media all and (min-width: 1200px) {
+  .container {
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+    height: 100vh;
+  }
+  section {
+    scroll-snap-align: start;
+    height: 100vh;
+    max-height: 100vh;
+  }
   .brand-logo {
     position: relative;
     left: 100%;
@@ -380,10 +392,23 @@ header.hide {
     width: 700px;
     display: inherit;
   }
-  #services .services {
+  #services {
     background-image: url(tloservices1.png);
     background-size: cover;
     background-position: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    justify-items: center;
+    display: -ms-grid;
+    display: grid;
+  }
+  #services .services {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 3fr;
@@ -394,6 +419,8 @@ header.hide {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    max-width: 1500px;
+    background: transparent;
   }
   #services .services-container {
     display: -ms-grid;
@@ -452,6 +479,7 @@ header.hide {
     position: absolute;
     right: 0;
     max-height: 100vh;
+    height: 100vh;
     -webkit-transform: translateX(70%);
             transform: translateX(70%);
     opacity: 0.8;
@@ -473,7 +501,7 @@ header.hide {
   #work .project.active {
     -webkit-animation: fade-in 1.5s 650ms forwards;
             animation: fade-in 1.5s 650ms forwards;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   #work h3 {
     color: white;
@@ -560,8 +588,22 @@ header.hide {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
   }
+  #contact {
+    background-image: url(tlocontact.png);
+    background-size: cover;
+    background-position: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -ms-grid;
+    display: grid;
+    position: relative;
+  }
   #contact .contact {
-    padding: 25px;
+    background: transparent;
+    position: relative;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
@@ -570,6 +612,7 @@ header.hide {
         -ms-flex-align: center;
             align-items: center;
     justify-items: center;
+    max-width: 1500px;
   }
   #contact .contact-detail {
     padding: 100px;
@@ -579,6 +622,7 @@ header.hide {
   }
   #contact h2 {
     text-transform: uppercase;
+    font-size: 2.5rem;
   }
   #contact h3 {
     margin-top: 50px;
@@ -589,9 +633,11 @@ header.hide {
   }
   #contact .form-container {
     padding: 50px;
-    background-image: -webkit-gradient(linear, left top, right top, from(#101010), to(black));
-    background-image: linear-gradient(to right, #101010, black);
+    background-image: url(contactform.svg);
+    background-position: center;
+    background-size: cover;
     display: block;
+    position: relative;
   }
   #contact .field {
     width: 100%;
@@ -604,17 +650,112 @@ header.hide {
     border: none;
     -webkit-box-shadow: none;
             box-shadow: none;
+    color: #bfbdbd;
+    font-size: 1rem;
   }
   #contact button {
+    font-size: 1rem;
     margin-top: 50px;
     text-transform: uppercase;
     width: 200px;
     height: 40px;
     color: #bfbdbd;
-    background-image: -webkit-gradient(linear, right top, left top, from(#101010), to(black));
-    background-image: linear-gradient(to left, #101010, black);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(#202020));
+    background-image: linear-gradient(black, #202020);
     border: none;
     cursor: pointer;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+  }
+  #contact button:hover {
+    border: 0.2px solid #bfbdbd;
+  }
+  #contact select {
+    color: #bfbdbd;
+  }
+  #contact textarea {
+    border: none;
+    color: #bfbdbd;
+    font-size: 1rem;
+    max-width: 100%;
+    resize: vertical;
+  }
+  #contact .icons {
+    position: absolute;
+    bottom: 150px;
+    left: 50px;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    color: #bfbdbd;
+    align-items: center;
+    justify-items: center;
+  }
+  #contact .contact-form i {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  #contact .icons i {
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  #contact .icons i:hover {
+    color: white;
+  }
+  #contact .form-container::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: 2%;
+    width: 450px;
+    height: 1px;
+    background: #bfbdbd;
+  }
+  #contact .form-container::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 1px;
+    height: 450px;
+    background: #bfbdbd;
+  }
+  #contact .dottt {
+    position: absolute;
+    top: -17px;
+    right: 470px;
+    height: 6px;
+    width: 6px;
+    background-color: #bfbdbd;
+    border-radius: 50%;
+    display: inline block;
+  }
+  #contact .dottt1 {
+    right: 485px;
+  }
+  #contact .dottt2 {
+    right: 500px;
+  }
+  #contact .dotttt {
+    position: absolute;
+    background-color: #bfbdbd;
+    border-radius: 50%;
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    right: -17px;
+    top: 450px;
+  }
+  #contact .dotttt1 {
+    top: 465px;
+  }
+  #contact .dotttt2 {
+    top: 480px;
   }
 }
 
