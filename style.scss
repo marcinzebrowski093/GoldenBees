@@ -304,18 +304,8 @@ html {
   /* Media Queries for desktop Start */
   
   @media all and (min-width:1200px){
-    .container {
-      scroll-snap-type: y mandatory;
-     height:100vh;
-    }
-
-
+   
     
-    section {
-      scroll-snap-align: start;
-      height:100vh;
-      max-height:100vh;
-    }
 
 
     .brand-logo 

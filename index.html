@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w==" crossorigin="anonymous" referrerpolicy="no-referrer" media="screen and (min-width:1200px)" />
 </head>
 <body>
-    <div class="container">
     <header id="header">
         <nav class="navbar">
             <div class="brand-logo">
@@ -28,7 +27,8 @@
             </div>
         </nav>
     </header>
-    <section id="hero">
+<div id="fullpage">
+    <section id="hero" data-anchor="hero">
         <span class="dot"></span>
         <span class="dot dot1"></span>
         <span class="dot dot2"></span>
@@ -42,7 +42,7 @@
         </div>
         
     </section>
-    <section id="services">
+    <section id="services" data-anchor="services">
         <div class="services">
             <h1>Services</h1>
             <div class="services-container">
@@ -79,7 +79,7 @@
             </div>
         </div>
     </section>
-    <section id="work">
+    <section id="work" data-anchor="work">
             <div class="work">
                 <div class="project" id="project">
                     <h1>Work</h1>

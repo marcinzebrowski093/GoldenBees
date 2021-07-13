@@ -295,16 +295,6 @@ header.hide {
 /* Media Queries for tablet End */
 /* Media Queries for desktop Start */
 @media all and (min-width: 1200px) {
-  .container {
-    -ms-scroll-snap-type: y mandatory;
-        scroll-snap-type: y mandatory;
-    height: 100vh;
-  }
-  section {
-    scroll-snap-align: start;
-    height: 100vh;
-    max-height: 100vh;
-  }
   .brand-logo {
     position: relative;
     left: 100%;
