@@ -305,9 +305,21 @@ html {
   
   @media all and (min-width:1200px){
    
+  
+    #fullpage {
+      overflow-y:scroll;
+      scroll-snap-type: y mandatory;
+      height:100vh;
+      
+    }
+
+    section {
+      scroll-snap-align:start;
+      height:100vh;
+      scroll-snap-stop:always;
+    }
+
     
-
-
     .brand-logo 
     {
       position: relative;
@@ -345,6 +357,13 @@ html {
       display: none;
     }
     
+#hero .hero {
+  background-image:url(herotlo.png)
+}
+
+    #hero .hero img {
+      display:none;
+    }
     
 
     #hero::after {
@@ -354,6 +373,7 @@ html {
       right: 25px;
       border-left: 0.2px solid #bfbdbd;
       height:400px;
+        z-index:999999999;
     }
   
     #hero .hero::after {
@@ -363,6 +383,7 @@ html {
       right: 50px;
       border-top:0.2px solid #bfbdbd;
       width:650px;
+      z-index:9999999999;
     }
 
     #hero .dot {
@@ -374,6 +395,7 @@ html {
       background-color: #bfbdbd;
       border-radius: 50%;
       display: inline-block;
+      z-index:999;
     }
 
     #hero .dot1 {
@@ -394,6 +416,7 @@ html {
       background-color: #bfbdbd;
       border-radius:50%;
       display:inline block;
+      z-index:999;
     }
 
     #hero .dott1 {
@@ -404,15 +427,6 @@ html {
       top:490px;
     }
 
-    #hero .hero img {
-      left:25%;
-    }
-  
-    #hero .hero img:nth-child(2) {
-      left:60%;
-      width:700px;  
-      display:inherit;
-    }
 
     #services {
       background-image: url(tloservices1.png);

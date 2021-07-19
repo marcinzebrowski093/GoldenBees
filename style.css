@@ -295,6 +295,17 @@ header.hide {
 /* Media Queries for tablet End */
 /* Media Queries for desktop Start */
 @media all and (min-width: 1200px) {
+  #fullpage {
+    overflow-y: scroll;
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+    height: 100vh;
+  }
+  section {
+    scroll-snap-align: start;
+    height: 100vh;
+    scroll-snap-stop: always;
+  }
   .brand-logo {
     position: relative;
     left: 100%;
@@ -326,6 +337,12 @@ header.hide {
   .toggle-button {
     display: none;
   }
+  #hero .hero {
+    background-image: url(herotlo.png);
+  }
+  #hero .hero img {
+    display: none;
+  }
   #hero::after {
     content: '';
     position: absolute;
@@ -333,6 +350,7 @@ header.hide {
     right: 25px;
     border-left: 0.2px solid #bfbdbd;
     height: 400px;
+    z-index: 999999999;
   }
   #hero .hero::after {
     content: '';
@@ -341,6 +359,7 @@ header.hide {
     right: 50px;
     border-top: 0.2px solid #bfbdbd;
     width: 650px;
+    z-index: 9999999999;
   }
   #hero .dot {
     position: absolute;
@@ -351,6 +370,7 @@ header.hide {
     background-color: #bfbdbd;
     border-radius: 50%;
     display: inline-block;
+    z-index: 999;
   }
   #hero .dot1 {
     right: 735px;
@@ -367,20 +387,13 @@ header.hide {
     background-color: #bfbdbd;
     border-radius: 50%;
     display: inline block;
+    z-index: 999;
   }
   #hero .dott1 {
     top: 475px;
   }
   #hero .dott2 {
     top: 490px;
-  }
-  #hero .hero img {
-    left: 25%;
-  }
-  #hero .hero img:nth-child(2) {
-    left: 60%;
-    width: 700px;
-    display: inherit;
   }
   #services {
     background-image: url(tloservices1.png);

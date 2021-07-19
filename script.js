@@ -5,7 +5,7 @@ const workNav = document.getElementById('work-nav')
 const servicesNav= document.getElementById('services-nav')
 const work = document.getElementById('work')
 const services = document.getElementById('services')
-
+const hero = document.getElementById('hero')
 
 
 toggleButton.addEventListener('click', () => {
@@ -144,6 +144,11 @@ let options1 = {
 }
 
 
+
+
+
+
+
 let callback = (entries, observer) => (
     entries.forEach(entry => {
         if(entry.isIntersecting){
@@ -169,60 +174,6 @@ let Text = document.getElementById('project')
 
 let observerText = new IntersectionObserver (callback,options);
 
-observerText.observe(Text)
 
-const sections = document.querySelectorAll('section');
-let activeSection;
-
-const setActiveSection = (section) => {
-    activeSection = section;
-}
-
-
-const showPreviousSection = () => {
-    const previousSection = activeSection.previousElementSibling;
-    if(previousSection == null){return};
-    previousSection.scrollIntoView();
-}
-
-const showNextSection = () => {
-    const nextSection = activeSection.nextElementSibling;
-    if(nextSection == null){return};
-    nextSection.scrollIntoView();
-}
-
-const sectionWatcherCallback = (section, sectionWatcher) => {
-    section.forEach(section => {
-        if(!section.isIntersecting){return};
-        setActiveSection(section.target);
-    })
-   
-}
-var lastScrollTop = 0;
-
-window.addEventListener('scroll', () => {
-    var st = window.pageYOffset || document.documentElement.scrollTop;
-    if(st > lastScrollTop){
-        showNextSection();
-    } else {
-        showPreviousSection();
-    }
-    lastScrollTop = st <= 0 ? 0 : st;
-})
-
-
-
-const sectionWatcherOptions = {
-    threshold:0.6,
-    }
-    
-    const sectionWatcher = new IntersectionObserver(sectionWatcherCallback,sectionWatcherOptions);
-    
-    sections.forEach(section => {
-        sectionWatcher.observe(section)
-    })
-    
-    
-    
-  
+observerText.observe(Text);
 
