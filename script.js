@@ -1,11 +1,16 @@
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navList = document.getElementsByClassName('nav-links')[0]
 const header = document.getElementById('header')
+const homeNav = document.getElementById('home-nav')
 const workNav = document.getElementById('work-nav')
 const servicesNav= document.getElementById('services-nav')
+const aboutNav = document.getElementById('about-nav')
+const contactNav = document.getElementById('contact-nav')
 const work = document.getElementById('work')
 const services = document.getElementById('services')
 const hero = document.getElementById('hero')
+const about = document.getElementById('about')
+const contact = document.getElementById('contact')
 
 
 toggleButton.addEventListener('click', () => {
@@ -25,7 +30,6 @@ work.scrollIntoView({
 
 });
 
-
 servicesNav.addEventListener('click', () => {
     if (window.matchMedia('(max-width: 1200px)').matches){
     navList.classList.toggle('active')
@@ -37,6 +41,36 @@ servicesNav.addEventListener('click', () => {
 
     });
 
+homeNav.addEventListener('click', () => {
+    if (window.matchMedia('(max-width: 1200px)').matches){
+    navList.classList.toggle('active')
+    toggleButton.classList.toggle('active')
+    header.classList.toggle('active')}
+    hero.scrollIntoView({
+        behavior: "smooth",
+    })
+
+    });
+aboutNav.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 1200px)').matches){
+        navList.classList.toggle('active')
+        toggleButton.classList.toggle('active')
+        header.classList.toggle('active')}
+        about.scrollIntoView({
+            behavior: "smooth",
+        })
+    
+        });   
+contactNav.addEventListener('click', () => {
+    if (window.matchMedia('(max-width: 1200px)').matches){
+    navList.classList.toggle('active')
+    toggleButton.classList.toggle('active')
+    header.classList.toggle('active')}
+    contact.scrollIntoView({
+        behavior: "smooth",
+    })
+
+    });
     window.addEventListener("scroll", function(){
         if(window.scrollY==0){
             header.style.backgroundColor ="transparent";

@@ -27,7 +27,7 @@ html {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 1rem;
   color: #bfbdbd;
   text-transform: uppercase;
@@ -271,6 +271,10 @@ header.hide {
 
 /* About End */
 /* Contact Start */
+#contact {
+  background: black;
+}
+
 #contact .contact {
   background: black;
   min-height: 100vh;
@@ -278,6 +282,67 @@ header.hide {
   display: -ms-grid;
   display: grid;
   color: #bfbfbf;
+  padding: 35px;
+}
+
+#contact .contact-detail p {
+  color: white;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+#contact h3 {
+  margin-top: 10px;
+}
+
+#contact .field {
+  width: 100%;
+  margin-top: 50px;
+  background: transparent;
+  border-bottom: 0.2px solid #bfbdbd;
+  padding-bottom: 5px;
+}
+
+#contact input {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #bfbdbd;
+  font-size: 1rem;
+}
+
+#contact button {
+  font-size: 1rem;
+  margin-top: 50px;
+  text-transform: uppercase;
+  width: 200px;
+  height: 40px;
+  color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(#202020));
+  background-image: linear-gradient(black, #202020);
+  border: none;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+#contact .form-container h2 {
+  margin-top: 35px;
+}
+
+#contact .icons {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+#contact .icons i {
+  margin: 15px 5px;
 }
 
 /* Contact End */
@@ -325,7 +390,7 @@ header.hide {
     left: -10%;
     background: transparent;
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
   .nav-list li {
     position: static;
@@ -348,7 +413,10 @@ header.hide {
     position: absolute;
     top: 40px;
     right: 25px;
-    border-left: 0.2px solid #bfbdbd;
+    border-left: 0.2px solid;
+    -o-border-image: linear-gradient(#bfbfbf, goldenrod) 1;
+       border-image: -webkit-gradient(linear, left top, left bottom, from(#bfbfbf), to(goldenrod)) 1;
+       border-image: linear-gradient(#bfbfbf, goldenrod) 1;
     height: 400px;
     z-index: 999999999;
   }
@@ -509,7 +577,7 @@ header.hide {
   #work h3 {
     color: white;
     margin-top: 10px;
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   #work p {
     color: white;
@@ -620,12 +688,19 @@ header.hide {
   #contact .contact-detail {
     padding: 100px;
   }
+  #contact .description {
+    font-size: 24px;
+    color: white;
+  }
+  #contact .contact-detail p {
+    color: white;
+  }
   #contact h1 {
     margin-bottom: 15px;
   }
   #contact h2 {
-    text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    color: white;
   }
   #contact h3 {
     margin-top: 50px;
@@ -642,35 +717,8 @@ header.hide {
     display: block;
     position: relative;
   }
-  #contact .field {
-    width: 100%;
-    margin-top: 50px;
-    background: transparent;
-    border-bottom: 0.2px solid #bfbdbd;
-    padding-bottom: 5px;
-  }
-  #contact input {
-    border: none;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    color: #bfbdbd;
-    font-size: 1rem;
-  }
-  #contact button {
-    font-size: 1rem;
-    margin-top: 50px;
-    text-transform: uppercase;
-    width: 200px;
-    height: 40px;
-    color: #bfbdbd;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(#202020));
-    background-image: linear-gradient(black, #202020);
-    border: none;
-    cursor: pointer;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    justify-items: center;
+  #contact .form-container h2 {
+    margin-top: 0;
   }
   #contact button:hover {
     border: 0.2px solid #bfbdbd;
@@ -763,6 +811,31 @@ header.hide {
 }
 
 /* Media Queries for desktop End */
+/* Media Queries for height < 600px Start */
+@media all and (min-width: 1200px) and (max-height: 650px) {
+  #fullpage {
+    overflow-y: visible;
+    -ms-scroll-snap-type: none;
+        scroll-snap-type: none;
+    height: auto;
+  }
+  section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    scroll-snap-stop: always;
+  }
+  #services {
+    color: black;
+  }
+  #contact {
+    height: 800px;
+  }
+  #contact .contact-detail {
+    padding: 0 !important;
+  }
+}
+
+/* Media Queries for height < 600px End */
 /* Keyframes */
 @-webkit-keyframes animate {
   0% {
