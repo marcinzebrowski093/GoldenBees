@@ -270,6 +270,24 @@ html {
      text-align: center;
      display:grid;
      position:relative;
+     padding:25px;
+   }
+
+   #about p {
+     font-size:1.5rem;
+     color:white;
+     margin-top:15px;
+   }
+
+   #about .about-quote p:nth-child(2) {
+     font-family: 'Cormorant', sans-serif;
+     color:#bfbdbd;
+     margin-top:15px;
+   }
+
+   .about-details img {
+     width:30%;
+     border:1px solid #bfbdbd;
    }
 
    
@@ -341,7 +359,7 @@ html {
 
     #contact .icons {
       position:relative;
-      color:white;
+      color:hsl(0, 0%, 100%);
       text-align: center;
     }
 
@@ -436,8 +454,9 @@ html {
       position:absolute;
       top:40px;
       right: 25px;
-      border-left: 0.2px solid;
-      border-image:linear-gradient(#bfbfbf,goldenrod) 1;
+      border-style:solid;
+      border-width:0.2px;
+      border-color:#bfbdbd;
       height:400px;
         z-index:999999999;
     }
@@ -447,7 +466,9 @@ html {
       position:absolute;
       top:60px;
       right: 50px;
-      border-top:0.2px solid #bfbdbd;
+      border-style:solid;
+      border-width:0.2px;
+      border-color:#bfbdbd;
       width:650px;
       z-index:9999999999;
     }
@@ -563,7 +584,7 @@ html {
       overflow: hidden;
       display:grid;
       grid-template-columns: 3fr 1fr;
-      padding:0;
+      padding:25px;
     }
 
 
@@ -586,9 +607,10 @@ html {
       grid-column: 2/3;
       position: relative;
       z-index:999;
-      margin:25px;
+      margin:10px;
       opacity:0;
-      display:block; 
+      display:block;
+      padding:10px;
     }
 
     #work .project.active {
@@ -599,7 +621,7 @@ html {
     #work h3 {
       color:white;
       margin-top:10px;
-      font-size:3rem;
+      font-size:2.6rem;
     }
 
     #work p {
@@ -609,6 +631,7 @@ html {
       letter-spacing: 3px;
       margin-right:5px;    
     }
+    
 
     #work span {
       font-size:1rem;
@@ -680,6 +703,52 @@ html {
       -webkit-transform: rotate(135deg);
     }
     
+    #about {
+ 
+      background:black;
+      align-content:center;
+      justify-content: center;
+      display:grid;
+      position:relative;
+    }
+
+    #about .about {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      justify-items: center;
+      align-items: center;
+      max-width:1500px;
+     }
+
+    .about-quote {
+      padding:10px;
+    }
+
+    .about-details {
+      margin:100px;
+      margin-right:100px;
+      display:flex;
+      padding:50px;
+      opacity:0.9;
+      border:2px solid #bfbdbd;
+    }
+
+    .about-details p {
+      padding-left:50px;
+      text-align: justify;
+      font-size:1.2rem !important;
+      color: #bfbdbd !important;
+    }
+
+    .about-description {
+      text-align: center;
+    }
+
+    #about h1 {
+      flex-basis:100%;
+      margin-left:50px;
+    }
+
     #contact {
       background-image:url(tlocontact.png);
       background-size: cover;
@@ -705,7 +774,7 @@ html {
       padding:100px;
     }
     #contact .description {
-      font-size:24px;
+      font-size:1.5rem;
       color:white;
     }
 
@@ -924,3 +993,5 @@ html {
   }
 
   /* Keyframes End */
+
+  
