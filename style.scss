@@ -452,12 +452,11 @@ html {
     #hero::after {
       content:'';
       position:absolute;
-      top:40px;
-      right: 25px;
-      border-style:solid;
-      border-width:0.2px;
-      border-color:#bfbdbd;
+    background:#bfbdbd;
+     width:1px;
       height:400px;
+      top:40px;
+      right:25px;
         z-index:999999999;
     }
   
@@ -466,10 +465,9 @@ html {
       position:absolute;
       top:60px;
       right: 50px;
-      border-style:solid;
-      border-width:0.2px;
-      border-color:#bfbdbd;
+  background:#bfbdbd;
       width:650px;
+      height:1px;
       z-index:9999999999;
     }
 
@@ -730,7 +728,8 @@ html {
       display:flex;
       padding:50px;
       opacity:0.9;
-      border:2px solid #bfbdbd;
+      border:1px solid #bfbdbd;
+  
     }
 
     .about-details p {

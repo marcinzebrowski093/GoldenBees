@@ -429,12 +429,11 @@ header.hide {
   #hero::after {
     content: '';
     position: absolute;
+    background: #bfbdbd;
+    width: 1px;
+    height: 400px;
     top: 40px;
     right: 25px;
-    border-style: solid;
-    border-width: 0.2px;
-    border-color: #bfbdbd;
-    height: 400px;
     z-index: 999999999;
   }
   #hero .hero::after {
@@ -442,10 +441,9 @@ header.hide {
     position: absolute;
     top: 60px;
     right: 50px;
-    border-style: solid;
-    border-width: 0.2px;
-    border-color: #bfbdbd;
+    background: #bfbdbd;
     width: 650px;
+    height: 1px;
     z-index: 9999999999;
   }
   #hero .dot {
@@ -712,7 +710,7 @@ header.hide {
     display: flex;
     padding: 50px;
     opacity: 0.9;
-    border: 2px solid #bfbdbd;
+    border: 1px solid #bfbdbd;
   }
   .about-details p {
     padding-left: 50px;
