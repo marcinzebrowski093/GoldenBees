@@ -11,13 +11,21 @@ const services = document.getElementById('services')
 const hero = document.getElementById('hero')
 const about = document.getElementById('about')
 const contact = document.getElementById('contact')
-
+const arrowDown = document.getElementById('arrow-down')
 
 toggleButton.addEventListener('click', () => {
     navList.classList.toggle('active')
     toggleButton.classList.toggle('active')
     header.classList.toggle('active')
 });
+
+
+arrowDown.addEventListener('click', (e) => {
+    e.preventDefault()
+    work.scrollIntoView({
+        behavior: "smooth",
+    })
+})
 
 workNav.addEventListener('click', () => {
     if (window.matchMedia('(max-width: 1200px)').matches){
