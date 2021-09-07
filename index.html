@@ -139,54 +139,26 @@
             </div>
             <div class="contact-form">
                 <div class="form-container">
-                    <form action="" method="POST">
+                    <form action="form.php" method="POST">
                     <h2>Get in touch!</h2>
                     <input type="text" class="field" placeholder = "Name" name="name" required>
                     <input type="email" class="field" placeholder = "E-mail" name="email" required>
                     <input type="tel" class="field" placeholder = "Phone number" name="tel">
                     <textarea class="field" placeholder="Message" name="message"></textarea>
                     <div class="g-recaptcha" data-sitekey="6LfTyOwbAAAAAOAIobM0Uwsag4iJLa0uWFb_Vtmk"></div>
-                    <button type="submit">Send message</button>
+                    <button type="submit" name="submit">Send message</button>
                     <div class="status">
-
-                        <?php
-                            if(isset($_POST['submit']))
-                            {
-                                $User_name = $_POST['name'];
-                                $tel = $_POST['tel'];
-                                $user_email = $_POST['email'];
-                                $user_message = $_POST['message'];
-
-                                $email_from = 'noreply@goldenbees.com';
-                                $email_subject = "New Form Submission";
-                                $email_body = "Name: $User_name.\n".
-                                             "Tel: $tel.\n".
-                                              "Email: $user_email.\n".
-                                              "Message: $user_message.\n";
-
-                                $to_email = "mzebrowski@amplifier.pl";
-                                $headers = "From: $email_from \r\n";
-                                $headers .= "Reply-to: $user_email\r\n";
-
-                                $secretKey = "6LfTyOwbAAAAAKNStfvZX-1Aol2naOReqXssskXq";
-                                $responseKey = $_POST['g-recaptcha-response];
-                                $UserIP = $_SERVER['REMOTE_ADDR'];
-                                $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$UserIP"
-
-                                $response = file_get_contents($url);
-                                $response = json_decode($response);
-                            }
-                        ?>
-
+                  
                     </div>
                     <input type="hidden" name="_captcha" value="false">
+                </form>
                     <span class="dottt"></span>
                     <span class="dottt dottt1"></span>
                     <span class="dottt dottt2"></span>
                     <span class="dotttt"></span>
                     <span class="dotttt dotttt1"></span>
                     <span class="dotttt dotttt2"></span>
-                </form>
+            
                 </div>
             </div>
         </div>
