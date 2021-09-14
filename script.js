@@ -57,7 +57,6 @@ homeNav.addEventListener('click', () => {
     hero.scrollIntoView({
         behavior: "smooth",
     })
-
     });
 aboutNav.addEventListener('click', () => {
         if (window.matchMedia('(max-width: 1200px)').matches){
@@ -175,6 +174,7 @@ let servicesBoxes = [...document.querySelectorAll('.services-card')]
 
 let titleSection = [...document.querySelectorAll('h1')]
 
+
 let options = {
     rootMargin: '0px 0px -250px 0px',
     treshold: 2,
@@ -185,19 +185,22 @@ let options1 = {
     treshold:1,
 }
 
-
-
-
+let options2 = {
+    treshold: [0,0.5,1],
+}
 
 
 
 let callback = (entries, observer) => (
     entries.forEach(entry => {
         if(entry.isIntersecting){
-            entry.target.classList.add('active')
+            entry.target.classList.add('active');
+        
         }
     })
 )
+
+
 
 let observer = new IntersectionObserver (callback, options);
 
@@ -219,3 +222,46 @@ let observerText = new IntersectionObserver (callback,options);
 
 observerText.observe(Text);
 
+
+const hiddenp = document.getElementById('hiddenp')
+const h1 = document.getElementById('h1')
+
+heroCallback = (entries, heroObserve) => {
+    entries.forEach((entry) => {
+        if(entry.intersectionRatio > 0){
+            homeNav.classList.add('active');
+            servicesNav.classList.remove('active');
+        }
+    })
+}
+
+let heroObserve = new IntersectionObserver (heroCallback ,options);
+
+heroObserve.observe(hiddenp);
+
+servicesCallback = (entries,workObserve) => {
+    entries.forEach((entry => {
+        if(entry.intersectionRatio > 0){
+            servicesNav.classList.add('active');
+            homeNav.classList.remove('active');
+            workNav.classList.remove('active');
+        }
+    }))
+}
+
+let servicesObserve = new IntersectionObserver (servicesCallback, options);
+
+servicesObserve.observe(h1)
+
+workCallback = (entries,workObserve) => {
+    entries.forEach((entry => {
+        if(entry.intersectionRatio > 0){
+            workNav.classList.add('active');
+            servicesNav.classList.remove('active');
+        }
+    }))
+}
+
+let workObserve = new IntersectionObserver (workCallback, options);
+
+workObserve.observe(work)
