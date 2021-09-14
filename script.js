@@ -225,12 +225,17 @@ observerText.observe(Text);
 
 const hiddenp = document.getElementById('hiddenp')
 const h1 = document.getElementById('h1')
+const project = document.getElementById('project')
+const aboutDetails = document.getElementById('about-details')
 
 heroCallback = (entries, heroObserve) => {
     entries.forEach((entry) => {
         if(entry.intersectionRatio > 0){
             homeNav.classList.add('active');
             servicesNav.classList.remove('active');
+            workNav.classList.remove('active');
+            aboutNav.classList.remove('active');
+            contactNav.classList.remove('active');
         }
     })
 }
@@ -245,6 +250,8 @@ servicesCallback = (entries,workObserve) => {
             servicesNav.classList.add('active');
             homeNav.classList.remove('active');
             workNav.classList.remove('active');
+            aboutNav.classList.remove('active');
+            contactNav.classList.remove('active');
         }
     }))
 }
@@ -258,10 +265,45 @@ workCallback = (entries,workObserve) => {
         if(entry.intersectionRatio > 0){
             workNav.classList.add('active');
             servicesNav.classList.remove('active');
+            aboutNav.classList.remove('active');
+            contactNav.classList.remove('active');
         }
     }))
 }
 
 let workObserve = new IntersectionObserver (workCallback, options);
 
-workObserve.observe(work)
+workObserve.observe(project)
+
+aboutCallback = (entries,aboutObserve) => {
+    entries.forEach((entry => {
+        if(entry.intersectionRatio > 0){
+            aboutNav.classList.add('active')
+            workNav.classList.remove('active');
+            servicesNav.classList.remove('active');
+            contactNav.classList.remove('active');
+            console.log('about')
+        }
+    }))
+}
+
+let aboutObserve = new IntersectionObserver (aboutCallback, options);
+
+aboutObserve.observe(aboutDetails)
+
+contactCallback = (entries,contactObserve) => {
+    entries.forEach((entry => {
+        if(entry.intersectionRatio > 0){
+            contactNav.classList.add('active')
+            workNav.classList.remove('active');
+            servicesNav.classList.remove('active');
+            aboutNav.classList.remove('active');
+            homeNav.classList.remove('active');
+            console.log('contact')
+        }
+    }))
+}
+
+let contactObserve = new IntersectionObserver (contactCallback, options);
+
+contactObserve.observe(contact)
