@@ -307,3 +307,18 @@ contactCallback = (entries,contactObserve) => {
 let contactObserve = new IntersectionObserver (contactCallback, options);
 
 contactObserve.observe(contact)
+
+const box = document.getElementsByClassName('box')
+let i = 0;
+
+nextSlide = () => {
+    box[i].classList.remove('active');
+    i = (i+1) % box.length;
+    box[i].classList.add('active');
+}
+
+prevSlide = () => {
+    box[i].classList.remove('active');
+    i = (i-1 + box.length) % box.length;
+    box[i].classList.add('active');
+}

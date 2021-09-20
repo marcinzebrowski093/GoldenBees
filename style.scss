@@ -280,7 +280,60 @@ input {
     display:none;
   }
   
+  .box {
+    align-self:center;
+    display:none;
+    text-align: start;
+    margin-left:100px;
+  }
+
+  .box h2 {
+    margin-bottom:50px;
+    color:white;
+    font-weight:500;
+  }
+
+  .box img {
+    max-width:450px;
+    max-height:256px;
+  }
+
+  .box.active {
+    display:flex;
+  }
   
+  .websites {
+    display:flex;
+    flex-direction: column;
+  }
+
+  .selvista {
+    position:relative;
+    width:450px;
+    height:256px;
+  }
+
+  .selvista p {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.75);
+    color:white;
+    visibility: hidden;
+    opacity:0;
+    justify-self: center;
+    padding-top:110px;
+    font-size:1.5em;
+    text-align:center;
+  }
+
+  .selvista:hover .img-description {
+    visibility:visible;
+    opacity:1;
+  }
+
   /* Work End */
 
 /* About Start */
@@ -651,7 +704,7 @@ input {
       font-size:2.6rem;
     }
 
-    #work p {
+    #one, #two, #three, #four {
       color:white;
       margin-top:50px;
       font-size:2.5rem;
@@ -659,7 +712,6 @@ input {
       margin-right:5px;    
     }
     
-
     #work span {
       font-size:1rem;
     }
