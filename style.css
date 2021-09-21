@@ -283,7 +283,6 @@ p.our-work {
       align-self: center;
   display: none;
   text-align: start;
-  margin-left: 100px;
 }
 
 .box h2 {
@@ -293,30 +292,16 @@ p.our-work {
 }
 
 .box img {
-  max-width: 450px;
-  max-height: 256px;
+  max-width: 20vw;
 }
 
 .box.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.websites {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
 }
 
 .selvista {
   position: relative;
-  width: 450px;
-  height: 256px;
 }
 
 .selvista p {
