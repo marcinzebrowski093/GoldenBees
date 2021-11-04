@@ -295,6 +295,7 @@ input {
 
   .box img {
     max-width:20vw;
+    margin-bottom:15px;
   }
 
   .box.active {
@@ -304,11 +305,13 @@ input {
 
   .selvista {
     position:relative;
-  
+  }
+
+  .selvista-img{
+ float:left;
   }
 
   .selvista p {
-    position:absolute;
     top:0;
     bottom:0;
     left:0;
@@ -318,14 +321,18 @@ input {
     visibility: hidden;
     opacity:0;
     justify-self: center;
-    padding-top:110px;
     font-size:1.5em;
     text-align:center;
   }
 
-  .selvista:hover .img-description {
+
+  .selvista-img:hover + .img-description {
     visibility:visible;
     opacity:1;
+  }
+
+  .selvista-img:hover {
+    opacity:0.3;
   }
 
   /* Work End */
@@ -776,6 +783,10 @@ input {
       -webkit-transform: rotate(135deg);
     }
     
+    #work .box {
+      margin-left:150px;
+    } 
+
     #about {
  
       background:black;
