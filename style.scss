@@ -303,15 +303,17 @@ input {
   }
   
 
-  .selvista {
+  .mockup {
     position:relative;
   }
 
-  .selvista-img{
+  .mockup-img{
  float:left;
+ margin-right:35px;
+ opacity:0.3;
   }
 
-  .selvista p {
+  .mockup p {
     top:0;
     bottom:0;
     left:0;
@@ -322,17 +324,17 @@ input {
     opacity:0;
     justify-self: center;
     font-size:1.5em;
-    text-align:center;
+    text-align:left;
   }
 
 
-  .selvista-img:hover + .img-description {
+  .mockup-img:hover + .img-description {
     visibility:visible;
     opacity:1;
   }
 
-  .selvista-img:hover {
-    opacity:0.3;
+  .mockup-img:hover {
+    opacity:1;
   }
 
   /* Work End */
@@ -523,7 +525,7 @@ input {
     }
     
 #hero .hero {
-  background-image:url(herotlo.png)
+  background-image:url(ladning.png)
 }
 
     #hero .hero img {
@@ -596,7 +598,7 @@ input {
 
 
     #services {
-      background-image: url(tloservices1.png);
+      background-image:url(servicestlo.png);
       background-size:cover;
       background-position: center;
       align-items: center;
@@ -613,7 +615,7 @@ input {
       justify-content: center;
       align-items: center;
       max-width:1500px;
-      background-image: url(tloservices1.png);
+      background:transparent;
     }
     
 
@@ -834,7 +836,7 @@ input {
     }
 
     #contact {
-      background-image:url(tlocontact.png);
+      background: black; 
       background-size: cover;
       background-position: center;
       align-content: center;
@@ -890,7 +892,7 @@ input {
 
   #contact .form-container {
     padding:50px;
-    background-image:url(contactform.svg);
+    background:black;
     background-position: center;
     background-size:cover;
     display:block;
@@ -943,63 +945,9 @@ input {
       color:white;
     }
 
-    #contact .form-container::after {
-      content: '';
-      position:absolute;
-      top:-15px;
-      right:2%;
-      width:450px;
-      height:1px;
-      background:#bfbdbd;
-    }
   
-    #contact .form-container::before {
-      content: '';
-      position:absolute;
-      top:-15px;
-      right:-15px;
-      width:1px;
-      height:450px;
-      background:#bfbdbd;
-    }
 
-    #contact  .dottt {
-      position:absolute;
-      top:-17px;
-      right:470px;
-      height:6px;
-      width:6px;
-      background-color: #bfbdbd;
-      border-radius:50%;
-      display:inline block;
-    }
 
-    #contact .dottt1 {
-      right:485px;
-    }
-
-    #contact .dottt2 {
-      right:500px;
-    }
-
-    #contact .dotttt {
-      position:absolute;
-      background-color:#bfbdbd;
-      border-radius:50%;
-      display:inline-block;
-      height:6px;
-      width:6px;
-      right:-17px;
-      top: 450px;
-    }
-
-    #contact .dotttt1 {
-      top:465px;
-    }
-
-    #contact .dotttt2 {
-      top:480px;
-    }
 
     #contact .g-recaptcha {
       margin-top:20px;
