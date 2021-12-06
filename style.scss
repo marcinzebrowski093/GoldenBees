@@ -218,23 +218,23 @@ input {
   }
 
   #services .services-card {
-    margin:10px;
-    padding:25px;
+    margin:20px;
+    padding:15px;
     background: #202020;
-    height:15em;
+    height:12em;
     border-radius:15px;
     opacity:0;
   }
 
 
   .services-card img {
-  height:55px;
+  height:45px;
   
   }
 
   .services-card h2 {
     margin-top:10px;
-    font-size:1rem;
+    font-size:0.9rem;
     color:#bfbdbd;
     text-transform: uppercase;
     font-weight:400;
@@ -242,7 +242,7 @@ input {
 
   .services-card p {
     font-weight:100;
-    font-size:0.9rem;
+    font-size:0.8rem;
     margin-top:15px;
     color:white;
     text-align:justify;
@@ -630,7 +630,7 @@ input {
 
     #services .services-card:hover {
     background:rgba(0,0,0,0.75);
-    transform:scale(1.2);
+    transform:scale(1.15);
     transition:1s;
     }
 
@@ -786,7 +786,7 @@ input {
     }
     
     #work .box {
-      margin-left:150px;
+      margin-left:60px;
     } 
 
     #about {
@@ -800,7 +800,7 @@ input {
 
     #about .about {
       display: grid;
-      grid-template-columns: 1fr 3fr;
+      grid-template-columns: 2fr 5fr;
       justify-items: center;
       align-items: center;
       max-width:1500px;
@@ -808,6 +808,7 @@ input {
 
     .about-quote {
       padding:10px;
+      margin-left:20px;
     }
 
     .about-details {
