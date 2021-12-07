@@ -29,7 +29,7 @@ input {
 
 h1 {
   font-size: 2rem;
-  padding: 1rem;
+  padding: 10px;
   color: #bfbdbd;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
@@ -233,7 +233,7 @@ p.our-work {
 
 .services-card h2 {
   margin-top: 10px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #bfbdbd;
   text-transform: uppercase;
   font-weight: 400;
@@ -241,7 +241,7 @@ p.our-work {
 
 .services-card p {
   font-weight: 100;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-top: 15px;
   color: white;
   text-align: justify;
@@ -283,6 +283,7 @@ p.our-work {
       align-self: center;
   display: none;
   text-align: start;
+  margin: 10px;
 }
 
 .box h2 {
@@ -564,6 +565,9 @@ p.our-work {
   #hero .dott2 {
     top: 490px;
   }
+  #services h1 {
+    justify-self: flex-start;
+  }
   #services {
     background-image: url(servicestlo.png);
     background-size: cover;
@@ -635,17 +639,29 @@ p.our-work {
     -webkit-animation: fade-in 2s linear 1.5s 1 normal forwards;
             animation: fade-in 2s linear 1.5s 1 normal forwards;
   }
+  #work {
+    background: black;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    overflow: hidden;
+  }
   #work .work {
     position: relative;
     background: black;
     background-position: center;
     background-size: cover;
-    overflow: hidden;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 3fr 1fr;
         grid-template-columns: 3fr 1fr;
     padding: 25px;
+    max-width: 1500px;
   }
   #work svg {
     display: inherit;
@@ -762,9 +778,6 @@ p.our-work {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
   }
-  #work .box {
-    margin-left: 60px;
-  }
   #about {
     background: black;
     -ms-flex-line-pack: center;
@@ -779,8 +792,8 @@ p.our-work {
   #about .about {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 2fr 5fr;
-        grid-template-columns: 2fr 5fr;
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
     justify-items: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -788,18 +801,13 @@ p.our-work {
     max-width: 1500px;
   }
   .about-quote {
-    padding: 10px;
-    margin-left: 20px;
+    padding-right: 15px;
   }
   .about-details {
-    margin: 100px;
-    margin-right: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 50px;
-    opacity: 0.9;
-    border: 1px solid #bfbdbd;
   }
   .about-details p {
     padding-left: 50px;
@@ -841,9 +849,6 @@ p.our-work {
     justify-items: center;
     max-width: 1500px;
   }
-  #contact .contact-detail {
-    padding: 100px;
-  }
   #contact .description {
     font-size: 1.5rem;
     color: white;
@@ -861,9 +866,6 @@ p.our-work {
   #contact h3 {
     margin-top: 50px;
     margin-bottom: 15px;
-  }
-  #contact .contact-form {
-    padding: 100px;
   }
   .status span {
     color: red;

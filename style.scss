@@ -32,7 +32,7 @@ input {
 
   h1 {
     font-size:2rem;
-    padding:1rem;
+    padding:10px;
     color:#bfbdbd;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
@@ -234,7 +234,7 @@ input {
 
   .services-card h2 {
     margin-top:10px;
-    font-size:0.9rem;
+    font-size:1rem;
     color:#bfbdbd;
     text-transform: uppercase;
     font-weight:400;
@@ -242,7 +242,7 @@ input {
 
   .services-card p {
     font-weight:100;
-    font-size:0.8rem;
+    font-size:0.9rem;
     margin-top:15px;
     color:white;
     text-align:justify;
@@ -284,7 +284,7 @@ input {
     align-self:center;
     display:none;
     text-align: start;
-    
+    margin:10px;
   }
 
   .box h2 {
@@ -596,6 +596,9 @@ input {
       top:490px;
     }
 
+    #services h1 {
+      justify-self:flex-start;
+    }
 
     #services {
       background-image:url(servicestlo.png);
@@ -658,16 +661,26 @@ input {
     }
     
   
+    #work {
+      background:black;
+      align-content: center;
+      justify-content: center;
+      position:relative;
+      display:grid;
+      overflow: hidden;
+    }
+
 
     #work .work {
       position:relative;
       background:black;
       background-position: center;
       background-size: cover;
-      overflow: hidden;
+      
       display:grid;
       grid-template-columns: 3fr 1fr;
       padding:25px;
+      max-width:1500px;
     }
 
 
@@ -785,9 +798,7 @@ input {
       -webkit-transform: rotate(135deg);
     }
     
-    #work .box {
-      margin-left:60px;
-    } 
+  
 
     #about {
  
@@ -800,24 +811,20 @@ input {
 
     #about .about {
       display: grid;
-      grid-template-columns: 2fr 5fr;
+      grid-template-columns: 1fr 3fr;
       justify-items: center;
       align-items: center;
       max-width:1500px;
      }
 
     .about-quote {
-      padding:10px;
-      margin-left:20px;
+      padding-right:15px;
     }
 
     .about-details {
-      margin:100px;
-      margin-right:100px;
+   
       display:flex;
       padding:50px;
-      opacity:0.9;
-      border:1px solid #bfbdbd;
     }
 
     .about-details p {
@@ -856,9 +863,7 @@ input {
       max-width:1500px;
     }
 
-    #contact .contact-detail {
-      padding:100px;
-    }
+   
     #contact .description {
       font-size:1.5rem;
       color:white;
@@ -881,10 +886,6 @@ input {
       margin-top:50px;
       margin-bottom:15px;
     }
-
-  #contact .contact-form {
-    padding:100px;
-  }
 
   .status span {
     color:red;
