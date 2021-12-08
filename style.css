@@ -197,10 +197,9 @@ p.our-work {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   color: #bfbdbd;
-  font-family: 'Cormorant', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  text-shadow: 0px 0px 2px white;
+  font-size: 0.8rem;
 }
 
 #hiddenp {
@@ -283,7 +282,7 @@ p.our-work {
       align-self: center;
   display: none;
   text-align: start;
-  margin: 10px;
+  margin-left: 35px;
 }
 
 .box h2 {
@@ -345,7 +344,7 @@ p.our-work {
   display: -ms-grid;
   display: grid;
   position: relative;
-  padding: 25px;
+  padding: 0 60px;
 }
 
 #about p {
@@ -378,7 +377,7 @@ p.our-work {
   display: -ms-grid;
   display: grid;
   color: #bfbfbf;
-  padding: 35px;
+  padding: 0 60px;
 }
 
 #contact .contact-detail p {
@@ -567,6 +566,7 @@ p.our-work {
   }
   #services h1 {
     justify-self: flex-start;
+    margin-left: 35px;
   }
   #services {
     background-image: url(servicestlo.png);
@@ -683,10 +683,9 @@ p.our-work {
     grid-column: 2/3;
     position: relative;
     z-index: 999;
-    margin: 10px;
     opacity: 0;
     display: block;
-    padding: 10px;
+    padding-right: 35px;
   }
   #work .project.active {
     -webkit-animation: fade-in 1.5s 650ms forwards;
@@ -697,6 +696,10 @@ p.our-work {
     color: white;
     margin-top: 10px;
     font-size: 2.6rem;
+  }
+  #work h2 {
+    font-size: 1rem;
+    font-weight: 400;
   }
   #one, #two, #three, #four {
     color: white;
@@ -802,12 +805,12 @@ p.our-work {
   }
   .about-quote {
     padding-right: 15px;
+    margin-top: 330px;
   }
   .about-details {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 50px;
   }
   .about-details p {
     padding-left: 50px;
@@ -817,11 +820,13 @@ p.our-work {
   }
   .about-description {
     text-align: center;
+    padding-left: 100px;
   }
   #about h1 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-left: 50px;
+    padding-top: 0;
   }
   #contact {
     background: black;
@@ -849,9 +854,8 @@ p.our-work {
     justify-items: center;
     max-width: 1500px;
   }
-  #contact .description {
-    font-size: 1.5rem;
-    color: white;
+  #contact .contact-detail {
+    padding-right: 100px;
   }
   #contact .contact-detail p {
     color: white;
@@ -871,7 +875,7 @@ p.our-work {
     color: red;
   }
   #contact .form-container {
-    padding: 50px;
+    padding-left: 100px;
     background: black;
     background-position: center;
     background-size: cover;
