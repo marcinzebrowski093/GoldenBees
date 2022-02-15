@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 @font-face {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   src: url(Didot\ Regular), format("opentype");
 }
 
@@ -11,7 +11,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 html {
@@ -32,7 +32,7 @@ h1 {
   padding: 10px;
   color: #bfbdbd;
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 5px;
 }
 
@@ -105,8 +105,8 @@ header.hide {
       -ms-flex-align: center;
           align-items: center;
   z-index: 1;
-  -webkit-transition: .6s ease left;
-  transition: .6s ease left;
+  -webkit-transition: 0.6s ease left;
+  transition: 0.6s ease left;
 }
 
 .nav-list ul.active {
@@ -131,7 +131,7 @@ header.hide {
 
 .toggle-button {
   position: absolute;
-  top: .5rem;
+  top: 0.5rem;
   right: 1rem;
   z-index: 99;
   background-image: url("Menu.svg");
@@ -197,7 +197,7 @@ p.our-work {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   color: #bfbdbd;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-size: 0.8rem;
 }
@@ -268,7 +268,9 @@ p.our-work {
   overflow-x: hidden;
 }
 
-#two, #three, #four {
+#two,
+#three,
+#four {
   display: none;
 }
 
@@ -276,29 +278,65 @@ p.our-work {
   display: none;
 }
 
+.box-container {
+  width: 100%;
+  min-height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  max-width: 1000px;
+}
+
+.box-slide {
+  min-height: 100%;
+  width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .box {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  display: none;
-  text-align: start;
-  margin-left: 35px;
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  min-width: 1000px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.websites {
+  min-width: 100%;
+}
+
+.graphics {
+  min-width: 100%;
 }
 
 .box h2 {
-  margin-bottom: 50px;
   color: white;
   font-weight: 500;
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.box p {
+  color: #bfbdbd;
+  text-align: left;
+}
+
+.bottom-line {
+  margin-bottom: 50px;
 }
 
 .box img {
   max-width: 20vw;
   margin-bottom: 15px;
-}
-
-.box.active {
-  display: -ms-grid;
-  display: grid;
 }
 
 .mockup {
@@ -309,6 +347,8 @@ p.our-work {
   float: left;
   margin-right: 35px;
   opacity: 0.3;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .mockup p {
@@ -324,11 +364,18 @@ p.our-work {
       justify-self: center;
   font-size: 1.5em;
   text-align: left;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
-.mockup-img:hover + .img-description {
+.hreflink:hover + .img-description {
   visibility: visible;
   opacity: 1;
+}
+
+.img-description {
+  margin-left: 20vw;
+  line-height: 0.8;
 }
 
 .mockup-img:hover {
@@ -354,7 +401,7 @@ p.our-work {
 }
 
 #about .about-quote p:nth-child(2) {
-  font-family: 'Cormorant', sans-serif;
+  font-family: "Cormorant", sans-serif;
   color: #bfbdbd;
   margin-top: 15px;
 }
@@ -486,13 +533,16 @@ p.our-work {
     background: transparent;
     text-transform: uppercase;
     font-size: 0.8rem;
+    z-index: 999;
   }
   .nav-list li {
     position: static;
     margin: 1.2rem;
+    z-index: 999;
   }
   .nav-list ul a {
     padding-right: 1.5rem;
+    z-index: 999;
   }
   #home-nav.active,
   #services-nav.active,
@@ -511,7 +561,7 @@ p.our-work {
     display: none;
   }
   #hero::after {
-    content: '';
+    content: "";
     position: absolute;
     background: #bfbdbd;
     width: 1px;
@@ -521,7 +571,7 @@ p.our-work {
     z-index: 999999999;
   }
   #hero .hero::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 60px;
     right: 50px;
@@ -583,6 +633,7 @@ p.our-work {
     justify-items: center;
     display: -ms-grid;
     display: grid;
+    position: relative;
   }
   #services .services {
     position: relative;
@@ -654,8 +705,6 @@ p.our-work {
   #work .work {
     position: relative;
     background: black;
-    background-position: center;
-    background-size: cover;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 3fr 1fr;
@@ -671,7 +720,6 @@ p.our-work {
     height: 100vh;
     -webkit-transform: translateX(70%);
             transform: translateX(70%);
-    opacity: 0.8;
   }
   #work svg.active {
     -webkit-animation: animate-triangle 2s forwards;
@@ -698,10 +746,13 @@ p.our-work {
     font-size: 2.6rem;
   }
   #work h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 400;
   }
-  #one, #two, #three, #four {
+  #one,
+  #two,
+  #three,
+  #four {
     color: white;
     margin-top: 50px;
     font-size: 2.5rem;
@@ -710,6 +761,7 @@ p.our-work {
   }
   #work span {
     font-size: 1rem;
+    color: #bfbdbd;
   }
   #work .buttons {
     margin-top: 20px;
@@ -848,10 +900,9 @@ p.our-work {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     justify-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     max-width: 1500px;
   }
   #contact .contact-detail {
@@ -1032,5 +1083,7 @@ p.our-work {
   }
 }
 
-/* Keyframes End */
+@-webkit-keyframes slide-left {}
+
+@keyframes slide-left {}/* Keyframes End */
 /*# sourceMappingURL=style.css.map */
