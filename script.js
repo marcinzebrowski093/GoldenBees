@@ -320,10 +320,11 @@ const box = document.getElementsByClassName('box');
 
 const boxSlide = document.querySelector('.box-slide');
 const box = document.querySelectorAll('.box');
-
+const projectContainer = document.querySelectorAll('.project-container')
 const prevBtn = document.querySelector('.btn-prev');
 const nextBtn = document.querySelector('.btn-next')
 
+i = 0
 let counter = 1;
 const size = box[0].clientWidth
 
@@ -331,23 +332,52 @@ const size = box[0].clientWidth
 boxSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
 nextBtn.addEventListener('click', () => {
+    if (counter >= box.length - 1) return;
     boxSlide.style.transition = "500ms"
     counter++;
     boxSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    projectContainer[i].classList.remove('active');
+    i = (i + 1) % projectContainer.length;
+    projectContainer[i].classList.add('active');
 });
+
+prevBtn.addEventListener('click', () => {
+    if (counter <= 0) return;
+    boxSlide.style.transition = "500ms"
+    counter--;
+    boxSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    projectContainer[i].classList.remove('active');
+    i = (i - 1 + projectContainer.length) % projectContainer.length;
+    projectContainer[i].classList.add('active');
+});
+
+boxSlide.addEventListener('transitionend', () => {
+    if (box[counter].id === 'lastClone') {
+        boxSlide.style.transition = "none";
+        counter = box.length - 2;
+        boxSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+})
+
+
+boxSlide.addEventListener('transitionend', () => {
+    if (box[counter].id === 'firstClone') {
+        boxSlide.style.transition = "none";
+        counter = box.length - counter;
+        boxSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+
+})
+
 
 /*
 
 nextSlide = () => {
-    box[i].classList.remove('active');
-    i = (i+1) % box.length;
-    box[i].classList.add('active');
+   
 }
 
 prevSlide = () => {
-    box[i].classList.remove('active');
-    i = (i-1 + box.length) % box.length;
-    box[i].classList.add('active');
+   
 }
 
 */
