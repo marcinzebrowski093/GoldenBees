@@ -237,15 +237,22 @@ p.our-work {
 
 #work .work {
   background: black;
-  min-height: 100vh;
+
   text-align: center;
   display: grid;
   padding: 25px;
 }
 
 #work .project {
-  align-self: flex-end;
   overflow-x: hidden;
+  grid-row: 1/2;
+}
+.project-container {
+  display: none;
+}
+
+.buttons {
+  display: none;
 }
 
 #work svg {
@@ -258,6 +265,7 @@ p.our-work {
   justify-content: center;
   overflow: hidden;
   max-width: 1000px;
+  display: none;
 }
 
 .box-slide {
@@ -296,6 +304,7 @@ p.our-work {
 }
 .bottom-line {
   margin-bottom: 50px;
+  display: none;
 }
 
 .box img {
@@ -335,6 +344,7 @@ p.our-work {
 }
 
 .img-description {
+  margin-top: 2vw;
   margin-left: 20vw;
   line-height: 0.8;
 }
@@ -348,29 +358,43 @@ p.our-work {
 /* About Start */
 
 #about .about {
-  background: black;
-  min-height: 100vh;
-  text-align: center;
   display: grid;
-  position: relative;
-  padding: 0 60px;
+  min-height: 100vh;
+  background: black;
+  padding: 25px;
 }
 
-#about p {
-  font-size: 1.5rem;
+.about-details {
+  grid-row: 1/2;
+  display: grid;
+  text-align: center;
+  margin: 20px;
+  justify-items: center;
+}
+
+.about-details p {
+  text-align: justify;
+  color: #bfbdbd;
+}
+
+.about-details img {
+  width: 50%;
+  align-items: flex-end;
+}
+
+.about-description {
+  grid-row: 1/2;
+}
+
+.about-quote {
   color: white;
-  margin-top: 15px;
+  text-align: center;
 }
 
 #about .about-quote p:nth-child(2) {
   font-family: "Cormorant", sans-serif;
   color: #bfbdbd;
   margin-top: 15px;
-}
-
-.about-details img {
-  width: 30%;
-  border: 1px solid #bfbdbd;
 }
 
 /* About End */
@@ -387,7 +411,7 @@ p.our-work {
   text-align: center;
   display: grid;
   color: #bfbfbf;
-  padding: 0 60px;
+  padding: 25px;
 }
 
 #contact .contact-detail p {
@@ -414,7 +438,7 @@ p.our-work {
   border: none;
   box-shadow: none;
   color: #bfbdbd;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 #contact button {
@@ -664,6 +688,7 @@ p.our-work {
     grid-template-columns: 3fr 1fr;
     padding: 25px;
     max-width: 1500px;
+    min-height: 100vh;
   }
 
   #work svg {
@@ -686,11 +711,20 @@ p.our-work {
     opacity: 0;
     display: block;
     padding-right: 35px;
+    align-self: flex-end;
   }
 
   #work .project.active {
     animation: fade-in 1.5s 650ms forwards;
     overflow-x: hidden;
+  }
+
+  .bottom-line {
+    display: block;
+  }
+
+  .box-container {
+    display: block;
   }
 
   #work h3 {
@@ -809,15 +843,24 @@ p.our-work {
     justify-items: center;
     align-items: center;
     max-width: 1500px;
+    background: black;
+    min-height: 100vh;
+    text-align: center;
+    display: grid;
+    position: relative;
+    padding: 0 60px;
   }
 
   .about-quote {
+    color: white;
     padding-right: 15px;
     margin-top: 330px;
+    font-size: 1.5rem;
   }
 
   .about-details {
     display: flex;
+    grid-row: unset;
   }
 
   .about-details p {
@@ -825,17 +868,30 @@ p.our-work {
     text-align: justify;
     font-size: 1.2rem !important;
     color: #bfbdbd !important;
+    margin-top: 15px;
   }
 
   .about-description {
     text-align: center;
     padding-left: 100px;
+    grid-row: unset;
   }
 
   #about h1 {
     flex-basis: 100%;
     margin-left: 50px;
     padding-top: 0;
+  }
+
+  #about .about-quote p:nth-child(2) {
+    font-family: "Cormorant", sans-serif;
+    color: #bfbdbd;
+    margin-top: 15px;
+  }
+
+  .about-details img {
+    width: 30%;
+    border: 1px solid #bfbdbd;
   }
 
   #contact {
@@ -856,14 +912,17 @@ p.our-work {
     justify-items: center;
     align-content: center;
     max-width: 1500px;
+    padding: 0 60px;
   }
 
   #contact .contact-detail {
     padding-right: 100px;
+    margin-right: 120px;
   }
 
   #contact .contact-detail p {
     color: white;
+    font-size: 1.2rem;
   }
 
   #contact h1 {
@@ -891,6 +950,7 @@ p.our-work {
     background-size: cover;
     display: block;
     position: relative;
+    margin-left: 100px;
   }
   #contact .form-container h2 {
     margin-top: 0;
@@ -907,7 +967,7 @@ p.our-work {
   #contact textarea {
     border: none;
     color: #bfbdbd;
-    font-size: 1rem;
+    font-size: 1.2rem;
     max-width: 100%;
     resize: vertical;
   }
