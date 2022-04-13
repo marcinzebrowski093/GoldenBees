@@ -224,6 +224,8 @@ p.our-work {
   -webkit-perspective: 1000px;
           perspective: 1000px;
   margin: 15px 0;
+  -webkit-animation: fade-out 2s linear 1 forwards;
+          animation: fade-out 2s linear 1 forwards;
 }
 
 .card-inner {
@@ -1172,6 +1174,30 @@ p.our-work {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

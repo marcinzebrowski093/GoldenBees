@@ -204,6 +204,7 @@ p.our-work {
   opacity: 0;
   perspective: 1000px;
   margin: 15px 0;
+  animation: fade-out 2s linear 1 forwards;
 }
 
 .card-inner {
@@ -1108,6 +1109,20 @@ p.our-work {
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
