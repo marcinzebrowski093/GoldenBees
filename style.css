@@ -218,16 +218,57 @@ p.our-work {
 }
 
 #services .services-card {
-  margin: 20px;
-  padding: 15px;
-  background: #202020;
-  height: 12em;
-  border-radius: 15px;
+  background: transparent;
+  height: 200px;
   opacity: 0;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  margin: 15px 0;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.services-card:hover .card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.front {
+  background: #202020;
+  color: white;
+}
+
+.back {
+  background-image: url("goold.png");
+  color: black;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .services-card img {
-  height: 45px;
+  margin-top: 30px;
+  height: 60px;
 }
 
 .services-card h2 {
@@ -242,7 +283,6 @@ p.our-work {
   font-weight: 100;
   font-size: 0.9rem;
   margin-top: 15px;
-  color: white;
   text-align: justify;
 }
 
@@ -681,16 +721,16 @@ p.our-work {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+    row-gap: 20px;
   }
-  #services .services-card {
-    background: rgba(0, 0, 0, 0.3);
+  .services-card {
+    width: 300px;
+    margin: 0;
   }
-  #services .services-card:hover {
-    background: rgba(0, 0, 0, 0.75);
-    -webkit-transform: scale(1.15);
-            transform: scale(1.15);
-    -webkit-transition: 1s;
-    transition: 1s;
+  .front {
+    background: black;
   }
   #services .web-development.active {
     -webkit-animation: fade-in 2s linear 1 forwards;
