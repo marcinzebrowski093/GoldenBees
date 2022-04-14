@@ -467,6 +467,7 @@ p.our-work {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  margin-top: 50px;
 }
 
 .about-description {
@@ -506,6 +507,12 @@ p.our-work {
   color: white;
 }
 
+.contact-form {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
 #contact h2 {
   font-size: 2rem;
   color: white;
@@ -529,6 +536,13 @@ p.our-work {
           box-shadow: none;
   color: #bfbdbd;
   font-size: 1.2rem;
+}
+
+#contact textarea {
+  border: none;
+  color: #bfbdbd;
+  font-size: 1.2rem;
+  max-width: 100%;
 }
 
 #contact button {
@@ -991,6 +1005,7 @@ p.our-work {
   .about-details img {
     width: 30%;
     border: 1px solid #bfbdbd;
+    margin: 0;
   }
   #contact {
     background: black;
@@ -1078,6 +1093,9 @@ p.our-work {
     color: #bfbdbd;
     align-items: center;
     justify-items: center;
+  }
+  .contact-form {
+    grid-row: unset;
   }
   #contact .contact-form i {
     vertical-align: middle;
