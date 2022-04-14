@@ -746,24 +746,24 @@ p.our-work {
             animation: fade-in 500ms linear 500ms forwards;
   }
   #services .graphic-design.active {
-    -webkit-animation: fade-in 500ms linear 500ms normal forwards;
-            animation: fade-in 500ms linear 500ms normal forwards;
+    -webkit-animation: fade-in 500ms linear 1s normal forwards;
+            animation: fade-in 500ms linear 1s normal forwards;
   }
   #services .ui-ux.active {
-    -webkit-animation: fade-in 500ms linear 500ms normal forwards;
-            animation: fade-in 500ms linear 500ms normal forwards;
+    -webkit-animation: fade-in 500ms linear 1.5s normal forwards;
+            animation: fade-in 500ms linear 1.5s normal forwards;
   }
   #services .ecommerce.active {
-    -webkit-animation: fade-in 500ms linear 500ms normal forwards;
-            animation: fade-in 500ms linear 500ms normal forwards;
+    -webkit-animation: fade-in 500ms linear 2s normal forwards;
+            animation: fade-in 500ms linear 2s normal forwards;
   }
   #services .social.active {
-    -webkit-animation: fade-in 500ms linear 500ms normal forwards;
-            animation: fade-in 500ms linear 500ms normal forwards;
+    -webkit-animation: fade-in 500ms linear 2.5s normal forwards;
+            animation: fade-in 500ms linear 2.5s normal forwards;
   }
   #services .marketing.active {
-    -webkit-animation: fade-in 500ms linear 500ms normal forwards;
-            animation: fade-in 500ms linear 500ms normal forwards;
+    -webkit-animation: fade-in 500ms linear 3s normal forwards;
+            animation: fade-in 500ms linear 3s normal forwards;
   }
   #work {
     background: black;
