@@ -200,11 +200,11 @@ p.our-work {
 
 #services .services-card {
   background: transparent;
-  height: 200px;
+  height: 180px;
   opacity: 0;
   perspective: 1000px;
   margin: 15px 0;
-  animation: fade-out 2s linear 1 forwards;
+  animation: fade-out 500ms linear 500ms forwards;
 }
 
 .card-inner {
@@ -213,6 +213,7 @@ p.our-work {
   height: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  vertical-align: middle;
 }
 
 .services-card:hover .card-inner {
@@ -238,10 +239,12 @@ p.our-work {
   background-image: url("back1.png");
   color: black;
   transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
 }
 
 .services-card img {
-  margin-top: 30px;
+  margin-top: 25px;
   height: 60px;
 }
 
@@ -254,9 +257,10 @@ p.our-work {
 }
 
 .services-card p {
-  font-size: 0.9rem;
-  margin-top: 15px;
+  font-size: 1rem;
   text-align: justify;
+  vertical-align: middle;
+  line-height: 1.2rem;
 }
 
 #services .services-card.active {
@@ -681,28 +685,28 @@ p.our-work {
   }
 
   .front {
-    background: black;
+    background: rgba(0, 0, 0, 0.25);
   }
 
   #services .web-development.active {
-    animation: fade-in 2s linear 1 forwards;
+    animation: fade-in 500ms linear 500ms forwards;
   }
 
   #services .graphic-design.active {
-    animation: fade-in 2s linear 500ms 1 normal forwards;
+    animation: fade-in 500ms linear 500ms normal forwards;
   }
 
   #services .ui-ux.active {
-    animation: fade-in 2s linear 1s 1 normal forwards;
+    animation: fade-in 500ms linear 500ms normal forwards;
   }
   #services .ecommerce.active {
-    animation: fade-in 2s linear 500ms 1 normal forwards;
+    animation: fade-in 500ms linear 500ms normal forwards;
   }
   #services .social.active {
-    animation: fade-in 2s linear 1s 1 normal forwards;
+    animation: fade-in 500ms linear 500ms normal forwards;
   }
   #services .marketing.active {
-    animation: fade-in 2s linear 1.5s 1 normal forwards;
+    animation: fade-in 500ms linear 500ms normal forwards;
   }
 
   #work {
