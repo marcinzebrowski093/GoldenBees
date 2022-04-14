@@ -204,7 +204,7 @@ p.our-work {
   opacity: 0;
   perspective: 1000px;
   margin: 15px 0;
-  animation: fade-out 500ms linear 500ms forwards;
+  animation: fade-out 500ms linear 1 backwards;
 }
 
 .card-inner {
@@ -264,7 +264,7 @@ p.our-work {
 }
 
 #services .services-card.active {
-  animation: fade-in 2s linear 1 forwards;
+  animation: fade-in 500ms linear 1 forwards;
 }
 
 /* Services End */

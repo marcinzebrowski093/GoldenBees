@@ -224,8 +224,8 @@ p.our-work {
   -webkit-perspective: 1000px;
           perspective: 1000px;
   margin: 15px 0;
-  -webkit-animation: fade-out 500ms linear 500ms forwards;
-          animation: fade-out 500ms linear 500ms forwards;
+  -webkit-animation: fade-out 500ms linear 1 backwards;
+          animation: fade-out 500ms linear 1 backwards;
 }
 
 .card-inner {
@@ -296,8 +296,8 @@ p.our-work {
 }
 
 #services .services-card.active {
-  -webkit-animation: fade-in 2s linear 1 forwards;
-          animation: fade-in 2s linear 1 forwards;
+  -webkit-animation: fade-in 500ms linear 1 forwards;
+          animation: fade-in 500ms linear 1 forwards;
 }
 
 /* Services End */
