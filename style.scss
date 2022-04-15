@@ -404,7 +404,6 @@ p.our-work {
   grid-row: 1/2;
   display: grid;
   text-align: center;
-  margin: 20px;
   justify-items: center;
 }
 
@@ -453,10 +452,12 @@ p.our-work {
 
 #contact .contact-detail p {
   color: white;
+  margin-top: 5px;
 }
 
 .contact-form {
   grid-row: 1/2;
+  min-height: 100vh;
 }
 
 #contact h2 {
@@ -465,7 +466,7 @@ p.our-work {
 }
 
 #contact h3 {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 #contact .field {
@@ -511,10 +512,16 @@ p.our-work {
   position: relative;
   color: hsl(0, 0%, 100%);
   text-align: center;
+  display: grid;
 }
 
 #contact .icons i {
   margin: 15px 5px;
+}
+
+#contact img {
+  width: 80%;
+  margin: 30px auto;
 }
 
 /* Contact End */
@@ -1036,6 +1043,7 @@ p.our-work {
 
   .contact-form {
     grid-row: unset;
+    min-height: auto;
   }
 
   #contact .contact-form i {
@@ -1054,6 +1062,10 @@ p.our-work {
 
   #contact .g-recaptcha {
     margin-top: 20px;
+  }
+
+  #contact img {
+    display: none;
   }
 }
 
