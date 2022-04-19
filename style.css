@@ -96,6 +96,8 @@ header.hide {
       -ms-flex-direction: column;
           flex-direction: column;
   background-image: url(landing1.png);
+  background-position: center;
+  background-size: cover;
   width: 100%;
   height: 100vh;
   -webkit-box-pack: center;
@@ -537,6 +539,8 @@ p.our-work {
           box-shadow: none;
   color: #bfbdbd;
   font-size: 1.2rem;
+  -webkit-appearance:none;
+  border-radius:0;
 }
 
 #contact textarea {
@@ -652,7 +656,7 @@ p.our-work {
     display: none;
   }
   #hero .hero {
-    background-image: url(ladning.png);
+    background-image: url(Main.png);
   }
   #hero .hero img {
     display: none;
