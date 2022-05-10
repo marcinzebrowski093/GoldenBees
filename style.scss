@@ -278,7 +278,7 @@ p.our-work {
   min-height: 100vh;
   text-align: center;
   display: grid;
-  padding: 25px;
+  padding: 0 25px;
 }
 
 #work .project {
@@ -288,6 +288,11 @@ p.our-work {
 
 .desktop-work-heading {
   display: none;
+}
+
+.paragraph {
+  color: white;
+  margin-bottom: 15px;
 }
 
 .project-container {
@@ -302,7 +307,7 @@ p.our-work {
   animation: fade-in 1s linear 1 forwards;
 }
 #work .buttons {
-  margin-top: 20px;
+  margin-top: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -418,7 +423,7 @@ p.our-work {
 }
 
 .box img {
-  max-width: 60vw;
+  max-width: 85vw;
   margin-bottom: 15px;
 }
 
@@ -428,7 +433,6 @@ p.our-work {
 
 .mockup-img {
   float: left;
-  margin-left: 35px;
 }
 
 .mockup p {
@@ -863,6 +867,7 @@ p.our-work {
   }
 
   #work .buttons {
+    margin-top: 20px;
     margin-bottom: 100px;
   }
 
