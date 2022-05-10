@@ -381,7 +381,7 @@ boxSlide.addEventListener('swiped-right', function (e) {
 });
 
 
-document.addEventListener('swiped-left', function (e) {
+boxSlide.addEventListener('swiped-left', function (e) {
     if (counter >= box.length - 1) return;
     boxSlide.style.transition = "500ms"
     counter++;
