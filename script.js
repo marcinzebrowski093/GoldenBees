@@ -370,6 +370,9 @@ boxSlide.addEventListener('transitionend', () => {
 })
 
 
+
+
+
 /*
 
 nextSlide = () => {
