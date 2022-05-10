@@ -370,7 +370,36 @@ boxSlide.addEventListener('transitionend', () => {
 })
 
 
+let touchstartX = 0
+let touchendX = 0
 
+const slider = document.getElementById('slider')
+
+function handleGesture() {
+    if (touchendX > touchstartX && counter >= box.length - 1) return;
+    boxSlide.style.transition = "500ms"
+    counter++;
+    boxSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    projectContainer[i].classList.remove('active');
+    i = (i + 1) % projectContainer.length;
+    projectContainer[i].classList.add('active');
+    if (touchendX < touchstartX && counter <= 0) return;
+    boxSlide.style.transition = "500ms"
+    counter--;
+    boxSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    projectContainer[i].classList.remove('active');
+    i = (i - 1 + projectContainer.length) % projectContainer.length;
+    projectContainer[i].classList.add('active');
+}
+
+boxSlide.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX
+})
+
+boxSlide.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX
+    handleGesture()
+})
 
 
 /*
