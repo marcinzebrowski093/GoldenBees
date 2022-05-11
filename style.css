@@ -629,6 +629,8 @@ p.our-work {
   color: #bfbdbd;
   font-size: 1.2rem;
   max-width: 100%;
+  border-radius: 0;
+  -webkit-appearance: none;
 }
 
 #contact button {
@@ -967,7 +969,7 @@ p.our-work {
   .mockup-img:hover {
     opacity: 1;
   }
-  .mobile-work-heading {
+  .mobile-work-container {
     display: none;
   }
   .bottom-line {
