@@ -513,11 +513,6 @@ p.our-work {
   transition: opacity 0.3s ease;
 }
 
-.hreflink:hover + .img-description {
-  visibility: visible;
-  opacity: 0;
-}
-
 .img-description {
   margin-top: 2vw;
   margin-left: 20vw;
