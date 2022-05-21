@@ -310,7 +310,6 @@ p.our-work {
   text-align: center;
   display: -ms-grid;
   display: grid;
-  padding: 0 25px;
 }
 
 #work .project {
@@ -321,8 +320,20 @@ p.our-work {
   grid-row: 2/3;
 }
 
+#work h1 {
+  margin-top: 15px;
+}
+
+#work h3 {
+  font-size: 1.5rem;
+}
+
 .desktop-work-heading {
   display: none;
+}
+
+.mobile-work-heading {
+  margin-top: 15px;
 }
 
 .paragraph {
@@ -344,12 +355,14 @@ p.our-work {
 }
 
 #work .buttons {
-  margin-top: 5px;
+  margin-top: 30vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   position: absolute;
+  z-index: 999;
+  width: 100%;
 }
 
 .buttons .btn-next:hover,
@@ -372,6 +385,8 @@ p.our-work {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: absolute;
+  left: 5px;
 }
 
 .buttons .btn-next {
@@ -381,6 +396,8 @@ p.our-work {
   border: 2px solid white;
   border-radius: 50px;
   justify-self: flex-start;
+  position: absolute;
+  right: 5px;
 }
 
 .arrow {
@@ -433,6 +450,7 @@ p.our-work {
           justify-content: center;
   overflow: hidden;
   max-width: 1000px;
+  padding: 0 25px;
 }
 
 .box-slide {
@@ -483,9 +501,9 @@ p.our-work {
 }
 
 .box img {
-  max-width: 60vw;
+  max-width: 70vw;
   margin-bottom: 15px;
-  margin-left: 12vw;
+  margin-left: 7vw;
 }
 
 .mockup {
@@ -973,6 +991,10 @@ p.our-work {
     margin-bottom: 100px;
     position: unset;
   }
+  #work .btn-prev,
+  #work .btn-next {
+    position: unset;
+  }
   .mockup-img {
     opacity: 0.3;
     -webkit-transition: opacity 0.2s ease;
@@ -984,6 +1006,9 @@ p.our-work {
     opacity: 1;
   }
   .mobile-work-container {
+    display: none;
+  }
+  .mobile-work-heading {
     display: none;
   }
   .bottom-line {
