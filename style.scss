@@ -275,7 +275,6 @@ p.our-work {
 
 #work .work {
   background: black;
-  min-height: 100vh;
   text-align: center;
   display: grid;
 }
@@ -318,13 +317,27 @@ p.our-work {
   opacity: 1;
   animation: fade-in 1s linear 1 forwards;
 }
-#work .buttons {
-  margin-top: 30vh;
+.buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: absolute;
   z-index: 999;
   width: 100%;
+  top: 45%;
+}
+
+.mobile-buttons .btn-prev {
+  position: absolute;
+  left: 3%;
+}
+
+.mobile-buttons .btn-next {
+  position: absolute;
+  right: 3%;
+}
+
+.desktop-buttons {
+  display: none;
 }
 
 .buttons .btn-next:hover,
@@ -343,8 +356,6 @@ p.our-work {
   justify-self: flex-end;
   align-content: center;
   justify-content: center;
-  position: absolute;
-  left: 5px;
 }
 
 .buttons .btn-next {
@@ -354,8 +365,6 @@ p.our-work {
   border: 2px solid white;
   border-radius: 50px;
   justify-self: flex-start;
-  position: absolute;
-  right: 5px;
 }
 
 .arrow {
@@ -400,7 +409,9 @@ p.our-work {
   justify-content: center;
   overflow: hidden;
   max-width: 1000px;
-  padding: 0 25px;
+  min-height: 60vh;
+  margin-top: 15px;
+  position: relative;
 }
 
 .box-slide {
@@ -445,7 +456,7 @@ p.our-work {
 .box img {
   max-width: 70vw;
   margin-bottom: 15px;
-  margin-left: 7vw;
+  margin-left: 15vw;
 }
 
 .mockup {
@@ -483,7 +494,6 @@ p.our-work {
 
 #about .about {
   display: grid;
-  min-height: 100vh;
   background: black;
   padding: 25px;
 }
@@ -531,11 +541,14 @@ p.our-work {
 
 #contact .contact {
   background: black;
-  min-height: 100vh;
   text-align: center;
   display: grid;
   color: #bfbfbf;
   padding: 25px;
+}
+
+.contact-detail {
+  margin-top: 30px;
 }
 
 #contact .contact-detail p {
@@ -545,7 +558,6 @@ p.our-work {
 
 .contact-form {
   grid-row: 1/2;
-  min-height: 100vh;
 }
 
 #contact h2 {
@@ -654,7 +666,6 @@ p.our-work {
     margin: 30px;
   }
 
-  #work .work,
   #about .about,
   #contact .contact {
     padding: 0 55px;
@@ -977,6 +988,17 @@ p.our-work {
 
   .box-container {
     display: block;
+    padding: 0 25px;
+    min-height: 100%;
+    margin-top: 0;
+  }
+
+  .desktop-buttons {
+    display: grid;
+  }
+
+  .mobile-buttons {
+    display: none;
   }
 
   #work h3 {
