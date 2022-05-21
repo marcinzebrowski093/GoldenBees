@@ -653,8 +653,46 @@ p.our-work {
   #services .services-card {
     margin: 30px;
   }
+
+  #work .work,
+  #about .about,
+  #contact .contact {
+    padding: 0 55px;
+  }
+
+  .description {
+    margin: 0 75px;
+  }
+
+  #contact .contact-form {
+    margin: 0 75px;
+  }
+
+  .icons img {
+    display: none;
+  }
+
+  .icons {
+    padding: 25px;
+  }
 }
+
 /* Media Queries for tablet End */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  #services .services-container {
+    margin-top: 12vw;
+  }
+
+  #contact .contact-form {
+    min-height: 0;
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1200px) {
+  #about .about-details img {
+    width: 35%;
+  }
+}
 
 /* Media Queries for desktop Start */
 
@@ -1007,7 +1045,7 @@ p.our-work {
     text-align: center;
     display: grid;
     position: relative;
-    padding: 0 60px;
+    padding: 25px;
   }
 
   .about-quote {
@@ -1030,9 +1068,21 @@ p.our-work {
     margin-top: 15px;
   }
 
+  .description {
+    margin: 0;
+  }
+
+  #contact .contact-form {
+    margin: 0;
+  }
+
+  .icons {
+    padding: 0;
+  }
+
   .about-description {
     text-align: center;
-    padding-left: 100px;
+    padding-left: 200px;
     grid-row: unset;
   }
 
@@ -1072,7 +1122,7 @@ p.our-work {
     justify-items: center;
     align-content: center;
     max-width: 1500px;
-    padding: 0 60px;
+    padding: 25px;
   }
 
   #contact .contact-detail {
