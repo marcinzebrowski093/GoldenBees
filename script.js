@@ -357,6 +357,15 @@ prevBtn.forEach(prevBtn => {
 })
 
 
+function highlight(obj) {
+    var orig = obj.style.color;
+    obj.style.backgroundColor = '#fff';
+    setTimeout(function () {
+        obj.style.color = orig;
+    }, 2000);
+}
+
+
 boxSlide.addEventListener('transitionend', () => {
     if (box[counter].id === 'lastClone') {
         boxSlide.style.transition = "none";
@@ -396,6 +405,9 @@ boxSlide.addEventListener('swiped-left', function (e) {
     i = (i + 1) % projectContainer.length;
     projectContainer[i].classList.add('active');
 });
+
+
+
 
 /*
 

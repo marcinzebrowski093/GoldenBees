@@ -517,6 +517,14 @@ p.our-work {
   margin-left: 15vw;
 }
 
+img.logos {
+  max-width: 35vw;
+}
+
+.box-logos {
+  text-align: left;
+}
+
 .mockup {
   position: relative;
 }
@@ -1084,6 +1092,17 @@ p.our-work {
     margin-bottom: 15px;
     margin-left: 0;
   }
+  img.logos {
+    max-width: 10vw;
+    margin-right: 10vw;
+    cursor: pointer;
+  }
+  img.logos:hover {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    -webkit-transition: 500ms;
+    transition: 500ms;
+  }
   .hreflink:hover + .img-description {
     visibility: visible;
     opacity: 1;
@@ -1137,6 +1156,7 @@ p.our-work {
     display: grid;
     position: relative;
     padding: 25px;
+    margin-right: 35px;
   }
   .about-quote {
     color: white;
@@ -1212,6 +1232,7 @@ p.our-work {
         align-content: center;
     max-width: 1500px;
     padding: 25px;
+    margin-right: 35px;
   }
   #contact .contact-detail {
     padding-right: 100px;
@@ -1229,7 +1250,7 @@ p.our-work {
     color: white;
   }
   #contact h3 {
-    margin-top: 50px;
+    margin-top: 25px;
     margin-bottom: 15px;
   }
   .status span {
@@ -1262,8 +1283,8 @@ p.our-work {
   }
   #contact .icons {
     position: absolute;
-    bottom: 150px;
-    left: 50px;
+    bottom: 25px;
+    left: 25px;
     display: -ms-grid;
     display: grid;
     -webkit-box-align: center;

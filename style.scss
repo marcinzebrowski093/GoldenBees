@@ -317,6 +317,7 @@ p.our-work {
   opacity: 1;
   animation: fade-in 1s linear 1 forwards;
 }
+
 .buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -457,6 +458,14 @@ p.our-work {
   max-width: 70vw;
   margin-bottom: 15px;
   margin-left: 15vw;
+}
+
+img.logos {
+  max-width: 35vw;
+}
+
+.box-logos {
+  text-align: left;
 }
 
 .mockup {
@@ -1018,6 +1027,17 @@ p.our-work {
     margin-left: 0;
   }
 
+  img.logos {
+    max-width: 10vw;
+    margin-right: 10vw;
+    cursor: pointer;
+  }
+
+  img.logos:hover {
+    transform: scale(1.6);
+    transition: 500ms;
+  }
+
   .hreflink:hover + .img-description {
     visibility: visible;
     opacity: 1;
@@ -1068,6 +1088,7 @@ p.our-work {
     display: grid;
     position: relative;
     padding: 25px;
+    margin-right: 35px;
   }
 
   .about-quote {
@@ -1145,6 +1166,7 @@ p.our-work {
     align-content: center;
     max-width: 1500px;
     padding: 25px;
+    margin-right: 35px;
   }
 
   #contact .contact-detail {
@@ -1167,7 +1189,7 @@ p.our-work {
   }
 
   #contact h3 {
-    margin-top: 50px;
+    margin-top: 25px;
     margin-bottom: 15px;
   }
 
@@ -1206,8 +1228,8 @@ p.our-work {
 
   #contact .icons {
     position: absolute;
-    bottom: 150px;
-    left: 50px;
+    bottom: 25px;
+    left: 25px;
     display: grid;
     align-items: center;
     justify-items: center;
