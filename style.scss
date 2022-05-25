@@ -497,6 +497,19 @@ img.logos {
   line-height: 0.8;
 }
 
+.number {
+  color: white;
+  margin-top: 50px;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  margin-right: 5px;
+}
+
+#work span {
+  font-size: 1rem;
+  color: #bfbdbd;
+}
+
 /* Work End */
 
 /* About Start */
@@ -1044,14 +1057,6 @@ img.logos {
     opacity: 1;
   }
 
-  .number {
-    color: white;
-    margin-top: 50px;
-    font-size: 2.5rem;
-    letter-spacing: 3px;
-    margin-right: 5px;
-  }
-
   .project-container {
     display: none;
     overflow: hidden;
@@ -1062,11 +1067,6 @@ img.logos {
     display: block;
     opacity: 1;
     animation: fade-in 1s linear 1 forwards;
-  }
-
-  #work span {
-    font-size: 1rem;
-    color: #bfbdbd;
   }
 
   #about {
