@@ -1084,8 +1084,9 @@ img.logos {
     font-size: 2.6rem;
   }
   #work h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 400;
+    color: #bfbdbd;
   }
   .box img {
     max-width: 20vw;
@@ -1093,13 +1094,13 @@ img.logos {
     margin-left: 0;
   }
   img.logos {
-    max-width: 10vw;
-    margin-right: 10vw;
+    margin-left: 2vw;
+    max-width: 20vw;
     cursor: pointer;
   }
   img.logos:hover {
-    -webkit-transform: scale(1.6);
-            transform: scale(1.6);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
     -webkit-transition: 500ms;
     transition: 500ms;
   }
