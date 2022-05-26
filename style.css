@@ -525,7 +525,6 @@ img.logos:hover {
           transform: scale(1.2);
   -webkit-transition: 500ms;
   transition: 500ms;
-  z-index: 999;
 }
 
 .box-logos {
@@ -567,7 +566,7 @@ img.logos:hover {
 
 .img-description {
   margin-top: 2vw;
-  margin-left: 20vw;
+  margin-left: 22vw;
   line-height: 0.8;
 }
 
@@ -1036,6 +1035,11 @@ img.logos:hover {
   #work svg.active {
     -webkit-animation: animate-triangle 2s forwards;
             animation: animate-triangle 2s forwards;
+    overflow: unset;
+  }
+  #work .box-container {
+    position: relative;
+    z-index: 999;
   }
   #work .project {
     -ms-grid-column: 2;
@@ -1073,6 +1077,10 @@ img.logos:hover {
   }
   .mockup-img:hover {
     opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: 500ms;
+    transition: 500ms;
   }
   .mobile-work-container {
     display: none;
@@ -1115,7 +1123,7 @@ img.logos:hover {
     font-size: 1rem;
   }
   .box img {
-    max-width: 20vw;
+    max-width: 400px;
     margin-bottom: 15px;
     margin-left: 0;
   }
@@ -1123,8 +1131,10 @@ img.logos:hover {
     margin-top: 0;
   }
   img.logos {
-    max-width: 20vw;
+    max-width: 400px;
     cursor: pointer;
+    position: relative;
+    z-index: 999;
   }
   img.black {
     margin-left: 35px;
@@ -1132,6 +1142,7 @@ img.logos:hover {
   .row {
     display: block;
     margin-left: 0;
+    position: relative;
   }
   .hreflink:hover + .img-description {
     visibility: visible;
@@ -1257,12 +1268,15 @@ img.logos:hover {
     position: absolute;
     z-index: 1999990;
     height: 100vh;
-    margin-left: 40px;
+    width: 50vw;
+    margin-left: 6vw;
+  }
+  #contact .contact-detail {
+    margin-right: 50px;
   }
   #contact .contact-detail p {
     color: white;
     font-size: 1.2rem;
-    margin-right: 50px;
   }
   #contact h1 {
     margin-bottom: 15px;
@@ -1312,7 +1326,7 @@ img.logos:hover {
     -ms-flex-line-pack: center;
         align-content: center;
     color: #bfbdbd;
-    margin: 0 150px;
+    margin: 0 220px;
     margin-top: 50px;
   }
   .contact-form {
