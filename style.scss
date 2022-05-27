@@ -411,6 +411,7 @@ p.our-work {
   overflow: hidden;
   max-width: 1000px;
   margin-top: 15px;
+  position: relative;
 }
 
 .box-slide {
@@ -1023,7 +1024,6 @@ img.logos:hover {
     display: block;
     padding: 0 25px 0 50px;
     margin-top: 0;
-    margin-right: 225px;
   }
 
   .desktop-buttons {
