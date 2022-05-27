@@ -1127,7 +1127,7 @@ img.logos:hover {
     font-size: 1rem;
   }
   .box img {
-    max-width: 400px;
+    max-width: 20vw;
     margin-bottom: 15px;
     margin-left: 0;
   }
@@ -1135,7 +1135,7 @@ img.logos:hover {
     margin-top: 0;
   }
   img.logos {
-    max-width: 400px;
+    max-width: 20vw;
     cursor: pointer;
   }
   img.black {
