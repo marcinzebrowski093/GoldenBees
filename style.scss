@@ -1061,6 +1061,12 @@ img.logos {
     cursor: pointer;
   }
 
+  img.logos:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    transition: 500ms;
+  }
+
   img.black {
     margin-left: 50px;
     opacity: 0.5;

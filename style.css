@@ -1124,6 +1124,13 @@ img.logos {
     max-width: 20vw;
     cursor: pointer;
   }
+  img.logos:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: 500ms;
+    transition: 500ms;
+  }
   img.black {
     margin-left: 50px;
     opacity: 0.5;
