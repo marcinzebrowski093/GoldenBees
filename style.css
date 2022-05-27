@@ -523,23 +523,8 @@ img.logos {
   transition: opacity 0.2s ease;
 }
 
-img.logos:hover {
-  opacity: 1;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: 500ms;
-  transition: 500ms;
-}
-
 .box-logos {
-  margin-top: 1vh;
   text-align: left;
-}
-
-.row {
-  display: block;
-  width: 100%;
-  margin-left: 10vw;
 }
 
 .mockup {
@@ -1099,6 +1084,7 @@ img.logos:hover {
     display: block;
     padding: 0 25px 0 50px;
     margin-top: 0;
+    min-height: 60vh;
   }
   .desktop-buttons {
     display: -ms-grid;
