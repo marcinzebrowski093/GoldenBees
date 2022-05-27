@@ -516,7 +516,7 @@ p.our-work {
 }
 
 img.logos {
-  max-width: 50vw;
+  max-width: 35vw;
   z-index: 999;
   opacity: 0.3;
   -webkit-transition: opacity 0.2s ease;
@@ -556,14 +556,6 @@ img.logos {
   margin-left: 20vw;
   line-height: 0.8;
   background: transparent;
-}
-
-.number {
-  color: white;
-  margin-top: 0px;
-  font-size: 1.5rem;
-  letter-spacing: 3px;
-  margin-right: 5px;
 }
 
 #work span {
