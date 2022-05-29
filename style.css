@@ -460,7 +460,6 @@ p.our-work {
   overflow: hidden;
   max-width: 1000px;
   margin-top: 15px;
-  position: relative;
 }
 
 .box-slide {
@@ -518,14 +517,17 @@ p.our-work {
 img.logos {
   max-width: 50vw;
   z-index: 999;
+  opacity: 0.3;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 img.logos:hover {
+  opacity: 1;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-transition: 500ms;
   transition: 500ms;
-  z-index: 999;
 }
 
 .box-logos {
@@ -553,7 +555,6 @@ img.logos:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.75);
   color: white;
   visibility: hidden;
   opacity: 0;
@@ -567,8 +568,9 @@ img.logos:hover {
 
 .img-description {
   margin-top: 2vw;
-  margin-left: 20vw;
+  margin-left: 500px;
   line-height: 0.8;
+  background: transparent;
 }
 
 .number {
@@ -753,6 +755,10 @@ img.logos:hover {
 
 #contact .g-recaptcha {
   margin-top: 20px;
+}
+
+#contact svg {
+  display: none;
 }
 
 /* Contact End */
@@ -1036,6 +1042,7 @@ img.logos:hover {
   #work svg.active {
     -webkit-animation: animate-triangle 2s forwards;
             animation: animate-triangle 2s forwards;
+    overflow: hidden;
   }
   #work .project {
     -ms-grid-column: 2;
@@ -1054,6 +1061,7 @@ img.logos:hover {
     -webkit-animation: fade-in 1.5s 650ms forwards;
             animation: fade-in 1.5s 650ms forwards;
     overflow-x: hidden;
+    width: 100%;
   }
   #work .buttons {
     margin-top: 20px;
@@ -1073,6 +1081,10 @@ img.logos:hover {
   }
   .mockup-img:hover {
     opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: 500ms;
+    transition: 500ms;
   }
   .mobile-work-container {
     display: none;
@@ -1087,6 +1099,7 @@ img.logos:hover {
     display: block;
     padding: 0 25px 0 50px;
     margin-top: 0;
+    margin-right: 225px;
   }
   .desktop-buttons {
     display: -ms-grid;
@@ -1115,7 +1128,7 @@ img.logos:hover {
     font-size: 1rem;
   }
   .box img {
-    max-width: 20vw;
+    max-width: 400px;
     margin-bottom: 15px;
     margin-left: 0;
   }
@@ -1123,11 +1136,12 @@ img.logos:hover {
     margin-top: 0;
   }
   img.logos {
-    max-width: 20vw;
+    max-width: 400px;
     cursor: pointer;
   }
   img.black {
-    margin-left: 35px;
+    margin-left: 50px;
+    opacity: 0.5;
   }
   .row {
     display: block;
@@ -1252,17 +1266,30 @@ img.logos:hover {
     max-width: 1500px;
     padding: 25px;
     margin-right: 35px;
+    z-index: 999;
   }
   #contact svg {
     position: absolute;
-    z-index: 1999990;
+    z-index: 1;
     height: 100vh;
-    margin-left: 40px;
+    width: 50vw;
+    margin-left: 6vw;
+    display: block;
+  }
+  #contact .contact-detail {
+    margin-right: 50px;
+    position: relative;
   }
   #contact .contact-detail p {
     color: white;
     font-size: 1.2rem;
-    margin-right: 50px;
+  }
+  #contact a {
+    text-decoration: none;
+  }
+  #contact p:hover {
+    text-decoration: none;
+    color: #bfbfbf;
   }
   #contact h1 {
     margin-bottom: 15px;
@@ -1312,7 +1339,7 @@ img.logos:hover {
     -ms-flex-line-pack: center;
         align-content: center;
     color: #bfbdbd;
-    margin: 0 150px;
+    margin: 0 220px;
     margin-top: 50px;
   }
   .contact-form {
