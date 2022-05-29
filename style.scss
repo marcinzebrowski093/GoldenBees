@@ -461,10 +461,24 @@ p.our-work {
 img.logos {
   max-width: 50vw;
   z-index: 999;
+  opacity: 0.3;
+  transition: opacity 0.2s ease;
 }
 
+img.logos:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  transition: 500ms;
+}
 .box-logos {
+  margin-top: 1vh;
   text-align: left;
+}
+
+.row {
+  display: grid;
+  width: 100%;
+  margin-left: 10vw;
 }
 
 .mockup {
@@ -480,7 +494,6 @@ img.logos {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.75);
   color: white;
   visibility: hidden;
   opacity: 0;
@@ -492,14 +505,15 @@ img.logos {
 
 .img-description {
   margin-top: 2vw;
-  margin-left: 20vw;
+  margin-left: 500px;
   line-height: 0.8;
+  background: transparent;
 }
 
 .number {
+  color: white;
   margin-top: 0px;
   font-size: 1.5rem;
-  color: white;
   letter-spacing: 3px;
   margin-right: 5px;
 }
@@ -646,7 +660,6 @@ img.logos {
 #contact .single-icon {
   display: grid;
   width: 30%;
-  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-content: center;
 }
@@ -658,6 +671,10 @@ img.logos {
 
 #contact .g-recaptcha {
   margin-top: 20px;
+}
+
+#contact svg {
+  display: none;
 }
 
 /* Contact End */
@@ -947,6 +964,12 @@ img.logos {
 
   #work svg.active {
     animation: animate-triangle 2s forwards;
+    overflow: unset;
+  }
+
+  #work .box-container {
+    position: relative;
+    z-index: 999;
   }
 
   #work .project {
@@ -985,6 +1008,8 @@ img.logos {
 
   .mockup-img:hover {
     opacity: 1;
+    transform: scale(1.2);
+    transition: 500ms;
   }
 
   .mobile-work-container {
@@ -1025,32 +1050,6 @@ img.logos {
     color: #bfbdbd;
   }
 
-  .box img {
-    max-width: 20vw;
-    margin-bottom: 15px;
-    margin-left: 0;
-  }
-
-  img.logos {
-    max-width: 20vw;
-    cursor: pointer;
-  }
-
-  img.logos:hover {
-    transform: scale(1.2);
-    transition: 500ms;
-    z-index: 999;
-  }
-
-  img.black {
-    margin-left: 35px;
-  }
-
-  .row {
-    display: block;
-    margin-left: 0;
-  }
-
   .number {
     margin-top: 50px;
     font-size: 2.5rem;
@@ -1060,6 +1059,34 @@ img.logos {
 
   #work span {
     font-size: 1rem;
+  }
+
+  .box img {
+    max-width: 400px;
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+
+  .box-logos {
+    margin-top: 0;
+  }
+
+  img.logos {
+    max-width: 400px;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+  }
+
+  img.black {
+    margin-left: 50px;
+    opacity: 0.5;
+  }
+
+  .row {
+    display: block;
+    margin-left: 0;
+    position: relative;
   }
 
   .hreflink:hover + .img-description {
@@ -1180,15 +1207,22 @@ img.logos {
     margin-right: 35px;
   }
 
+  #contact svg {
+    position: absolute;
+    z-index: 1999990;
+    height: 100vh;
+    width: 50vw;
+    margin-left: 6vw;
+    display: block;
+  }
+
   #contact .contact-detail {
-    padding-right: 100px;
-    margin-right: 120px;
+    margin-right: 50px;
   }
 
   #contact .contact-detail p {
     color: white;
     font-size: 1.2rem;
-    margin-right: 50px;
   }
 
   #contact h1 {
@@ -1219,11 +1253,8 @@ img.logos {
     position: relative;
     margin-left: 100px;
   }
-  #contact .form-container h2 {
-    margin-top: 0;
-  }
 
-  #contact .button {
+  #contact button {
     margin-top: 50px;
   }
 
@@ -1248,8 +1279,8 @@ img.logos {
     grid-template-columns: 1fr 1fr 1fr;
     align-content: center;
     color: #bfbdbd;
-    align-items: center;
-    justify-items: center;
+    margin: 0 220px;
+    margin-top: 50px;
   }
 
   .contact-form {
