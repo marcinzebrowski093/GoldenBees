@@ -324,7 +324,7 @@ p.our-work {
   position: absolute;
   z-index: 999;
   width: 100%;
-  top: 40%;
+  top: 43%;
 }
 
 .mobile-buttons .btn-prev {
@@ -407,7 +407,7 @@ p.our-work {
   justify-content: center;
   overflow: hidden;
   max-width: 1000px;
-  margin-top: 15px;
+  margin-top: 1vh;
   position: relative;
 }
 
@@ -456,6 +456,10 @@ img.logos {
   z-index: 999;
 }
 
+.uiux img {
+  max-width: 70vw;
+}
+
 img.logos:hover {
   opacity: 1;
   transform: scale(1.2);
@@ -471,6 +475,10 @@ img.logos:hover {
   display: grid;
   width: 100%;
   margin-left: 10vw;
+}
+
+.uiux .row {
+  margin-left: 0;
 }
 
 .mockup,
