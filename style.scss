@@ -118,16 +118,23 @@ header.hide {
 
 .toggle-button {
   position: absolute;
-  top: 0.5rem;
+  top: 1rem;
   right: 1rem;
   z-index: 99;
-  background-image: url("Menu.svg");
-  background-size: cover;
-  min-width: 55px;
-  min-height: 60px;
-  transition: background-image 150ms;
+  width: 55px;
+  height: 60px;
+  transition: transform 250ms;
 }
 
+.toggle-button img {
+  width: 55px;
+}
+
+.toggle-button.active {
+  transform: rotate(360deg);
+}
+
+/*
 .toggle-button.active {
   background-image: url("Menu1.PNG");
   background-size: cover;

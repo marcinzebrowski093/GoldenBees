@@ -133,17 +133,27 @@ header.hide {
 
 .toggle-button {
   position: absolute;
-  top: 0.5rem;
+  top: 1rem;
   right: 1rem;
   z-index: 99;
-  background-image: url("Menu.svg");
-  background-size: cover;
-  min-width: 55px;
-  min-height: 60px;
-  -webkit-transition: background-image 150ms;
-  transition: background-image 150ms;
+  width: 55px;
+  height: 60px;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
 }
 
+.toggle-button img {
+  width: 55px;
+}
+
+.toggle-button.active {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+/*
 .toggle-button.active {
   background-image: url("Menu1.PNG");
   background-size: cover;
@@ -151,7 +161,6 @@ header.hide {
   height: 60px;
   right: 1.5rem;
   top: 1rem;
-  -webkit-transition: background-image 150ms;
   transition: background-image 150ms;
 }
 
