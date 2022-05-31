@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="22" viewBox="0 0 30 22">
-  <g id="laptop" transform="translate(-1 -5)">
-    <path id="Path_1" data-name="Path 1" d="M27,19V6H5V19" fill="none" stroke="#d4af37" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
-    <path id="Path_2" data-name="Path 2" d="M30,26H2l2-4H28Z" fill="none" stroke="#d4af37" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
-    <path id="Path_3" data-name="Path 3" d="M11,11,8,14l3,3" fill="none" stroke="#d4af37" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
-    <path id="Path_4" data-name="Path 4" d="M21,11l3,3-3,3" fill="none" stroke="#d4af37" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
-    <line id="Line_1" data-name="Line 1" x1="4" y2="8" transform="translate(14 10)" fill="none" stroke="#d4af37" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
-  </g>
-</svg>
