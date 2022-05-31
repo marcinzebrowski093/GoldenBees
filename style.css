@@ -638,6 +638,7 @@ img.logos:hover {
 }
 
 .about-quote {
+  margin-top: 15px;
   color: white;
   text-align: center;
 }
