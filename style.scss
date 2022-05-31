@@ -341,13 +341,6 @@ p.our-work {
   display: none;
 }
 
-.buttons .btn-next:hover,
-.buttons .btn-prev:hover {
-  background: white;
-  cursor: pointer;
-  box-shadow: inset 1px 1px 3px black;
-}
-
 .buttons .btn-prev {
   margin: 5px;
   width: 35px;
@@ -378,14 +371,19 @@ p.our-work {
   margin-top: 10px;
 }
 
-.btn-next:hover .right,
-.btn-prev:hover .left {
+.btn-hover {
   border: solid black;
   border-width: 0 2px 2px 0;
   padding: 5px;
   justify-self: center;
   align-self: center;
   margin-top: 10px;
+}
+
+.btn-background-hover {
+  background: white;
+  cursor: pointer;
+  box-shadow: inset 1px 1px 3px black;
 }
 
 .right {
@@ -997,6 +995,23 @@ img.logos:hover {
   #work .btn-prev,
   #work .btn-next {
     position: unset;
+  }
+
+  .btn-next:hover .right,
+  .btn-prev:hover .left {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  .buttons .btn-next:hover,
+  .buttons .btn-prev:hover {
+    background: white;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 3px black;
   }
 
   .mockup-img {

@@ -420,3 +420,27 @@ prevSlide = () => {
 }
 
 */
+
+const prev = document.getElementById('prev')
+const next = document.getElementById('next')
+const left = document.getElementById('left')
+const right = document.getElementById('right')
+
+
+prev.addEventListener('click', () => {
+    prev.classList.add('btn-background-hover');
+    left.classList.add('btn-hover');
+    setTimeout(function () {
+        prev.classList.remove('btn-background-hover');
+        left.classList.remove('btn-hover');
+    }, 250)
+})
+
+next.addEventListener('click', () => {
+    next.classList.add('btn-background-hover');
+    right.classList.add('btn-hover');
+    setTimeout(function () {
+        next.classList.remove('btn-background-hover');
+        right.classList.remove('btn-hover');
+    }, 250)
+})
