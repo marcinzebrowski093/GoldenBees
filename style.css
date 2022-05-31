@@ -780,6 +780,10 @@ img.logos:hover {
   display: none;
 }
 
+#contact a {
+  text-decoration: none;
+}
+
 /* Contact End */
 /* Media Queries for mobile */
 /* Media Queries for tablet Start */
@@ -1329,9 +1333,6 @@ img.logos:hover {
   #contact .contact-detail p {
     color: white;
     font-size: 1.2rem;
-  }
-  #contact a {
-    text-decoration: none;
   }
   #contact p:hover {
     text-decoration: none;
