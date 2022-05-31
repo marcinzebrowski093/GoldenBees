@@ -499,11 +499,6 @@ p.our-work {
   line-height: 2;
 }
 
-.box p {
-  color: #bfbdbd;
-  text-align: left;
-}
-
 .bottom-line {
   display: none;
 }
@@ -517,9 +512,6 @@ p.our-work {
 img.logos {
   max-width: 50vw;
   z-index: 999;
-  opacity: 0.3;
-  -webkit-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
 }
 
 img.logos:hover {
@@ -542,15 +534,21 @@ img.logos:hover {
   margin-left: 10vw;
 }
 
-.mockup {
+.mockup,
+.row {
   position: relative;
+}
+
+.row p {
+  margin-left: 26vw;
+  display: none;
 }
 
 .mockup-img {
   float: left;
 }
 
-.mockup p {
+.img-description {
   top: 0;
   bottom: 0;
   left: 0;
@@ -653,6 +651,10 @@ img.logos:hover {
 #contact .contact-detail p {
   color: white;
   margin-top: 5px;
+}
+
+#contact .contact-detail {
+  margin-top: 50px;
 }
 
 .contact-form {
@@ -1128,7 +1130,7 @@ img.logos:hover {
     font-size: 1rem;
   }
   .box img {
-    max-width: 400px;
+    max-width: 30vw;
     margin-bottom: 15px;
     margin-left: 0;
   }
@@ -1136,15 +1138,23 @@ img.logos:hover {
     margin-top: 0;
   }
   img.logos {
-    max-width: 400px;
+    max-width: 22vw;
     cursor: pointer;
+    float: left;
+    opacity: 0.3;
+    -webkit-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
   }
   img.black {
     opacity: 0.5;
+    margin-right: 25px;
   }
   .row {
     display: block;
     margin-left: 0;
+  }
+  .row p {
+    display: block;
   }
   .hreflink:hover + .img-description {
     visibility: visible;
@@ -1278,6 +1288,7 @@ img.logos:hover {
   #contact .contact-detail {
     margin-right: 50px;
     position: relative;
+    margin-top: 0;
   }
   #contact .contact-detail p {
     color: white;
@@ -1397,6 +1408,12 @@ img.logos:hover {
   }
   #contact .contact-detail {
     padding: 0 !important;
+  }
+}
+
+@media all and (min-width: 1500px) {
+  .box img {
+    max-width: 22vw;
   }
 }
 
