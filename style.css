@@ -1060,6 +1060,7 @@ img.logos:hover {
     right: 0;
     max-height: 100vh;
     height: 100vh;
+    width: 70vw;
     -webkit-transform: translateX(70%);
             transform: translateX(70%);
   }
