@@ -27,11 +27,13 @@
 
                                 if ($response->success)
                                 {
+                                    header("Location:formsubmitted");
                                     mail($to_email, $email_subject, $email_body, $headers);
                                     echo "Message sent Successfully";
                                 }
                                 else 
                                 {
+                                    header("Location:index.html");
                                     echo "<span>Invalid Captcha, please try again</span>";
                                 }
 

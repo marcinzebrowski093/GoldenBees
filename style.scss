@@ -457,6 +457,7 @@ p.our-work {
   max-width: 70vw;
   margin-bottom: 15px;
   margin-left: 15vw;
+  cursor: pointer;
 }
 
 img.logos {
@@ -1223,7 +1224,7 @@ img.logos:hover {
   }
 
   .about-details img {
-    width: 30%;
+    width: 300px;
     border: 1px solid #bfbdbd;
     margin: 0;
   }
